@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>solvers help</title>
+</head><body>
+<h1>Macro Library solvers</h1>
+Some solving algorithms.  Version 1.1 March 25, 2014
+<BR><ul>
+<li><a href="#bisectionsolve">bisectionsolve</a></li>
+<li><a href="#discretenewtons">discretenewtons</a></li>
+</ul>
+
+<h3><a name="bisectionsolve">bisectionsolve</a></h3>
+<p>bisectionsolve(function, xmin, xmax)</p>
+<p>Applies bisection to find a root of hte function on the interval [xmin, xmax]. 
+    This function only works if there is exactly one root in the interval.</p>
+
+<h3><a name="discretenewtons">discretenewtons</a></h3>
+discretenewtons(function,xmin,xmax,[guess]) 
+<BR>applies a discrete form of Newton's method to find a root of the function
+<BR>on the interval [xmin,xmax].  Starts at midpoint of interval, or at guess if
+<BR>provided.  If method fails to converge, or converges outside interval, the
+<BR>method returns null.  Make sure function uses the variable x
+<BR>
