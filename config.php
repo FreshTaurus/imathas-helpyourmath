@@ -11,7 +11,7 @@ $dbpassword = "eveYY881013";
 error_reporting(E_ALL & ~E_NOTICE);
 
 //install name
-$installname = "IMathAS";
+$installname = "Help Your Math";
 
 //login prompts
 $loginprompt = "Username";

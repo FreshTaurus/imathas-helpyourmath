@@ -15,7 +15,7 @@ if (isset($CFG['hooks']['header'])) {
 }
 ?>
 <head>
-<title><?php echo "Help Your Math"; if (isset($pagetitle)) { echo " - $pagetitle";}?></title>
+<title><?php echo $installname; if (isset($pagetitle)) { echo " - $pagetitle";}?></title>
 <meta http-equiv="X-UA-Compatible" content="IE=7, IE=Edge" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -388,10 +388,7 @@ if (!isset($nologo) && !empty($smallheaderlogo)) {
 		}
 		echo ')" onmouseout="mclosetime()"';
 	}
-	echo '>';
-    $smallheaderlogo = 'Help Your Math';
-    echo $smallheaderlogo;
-    echo'</div>';
+    echo '>'.$smallheaderlogo.'</div>';
 	if (isset($myrights) && $myrights>10 && !$ispublic && !isset($_SESSION['ltiitemtype'])) {
 		echo '<div id="homemenu" class="ddmenu" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">';
 		echo '</div>';
