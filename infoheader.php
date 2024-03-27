@@ -8,7 +8,7 @@
 <li><a href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a></li>
 </ul>
 
-<div id="header">
+<!--<div id="header">-->
 <!--<img class="floatright" src="--><?php //echo $imasroot; ?><!--/img/graph.gif" alt="graph image" />-->
 <!--<div class="vcenter">--><?php //echo $pagetitle;?><!--</div>-->
-</div>
+<!--</div>-->
