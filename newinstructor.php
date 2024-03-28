@@ -125,7 +125,7 @@
 			</div>
 		  </div>";
 
-	echo "<div class=submit><input type=submit value=\"Request Account\"></div>\n";
+	echo "<div><input class=instructor-submit-btn type=submit value=\"Request Account\"></div>\n";
 	echo "</form>\n";
 
 	echo "</div>";
