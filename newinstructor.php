@@ -96,12 +96,14 @@
 	if (isset($_POST['school'])) {$school=Sanitize::encodeStringForDisplay($_POST['school']);} else {$school='';}
 	if (isset($_POST['SID'])) {$username=Sanitize::encodeStringForDisplay($_POST['SID']);} else {$username='';}
 
-	echo "<h3>New Instructor Account Request</h3>\n";
+	echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
+	echo "<h3 style='font-size: 37px; color: #00cc00;'>New Instructor Account Request</h3>\n";
 	echo "<form method=post id=newinstrform class=limitaftervalidate action=\"newinstructor.php\">\n";
-	echo "<span class=form>First Name</span><span class=formright><input type=text id=firstname name=firstname value=\"$firstname\" size=40></span><br class=form />\n";
-	echo "<span class=form>Last Name</span><span class=formright><input type=text id=lastname name=lastname value=\"$lastname\" size=40></span><br class=form />\n";
-	echo "<span class=form>Email Address</span><span class=formright><input type=text id=email name=email value=\"$email\" size=40></span><br class=form />\n";
-	echo "<span class=form>Phone Number</span><span class=formright><input type=text id=phone name=phone value=\"$phone\" size=40></span><br class=form />\n";
+
+	echo "<span class=form></span><input class=form type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br class=form >\n";
+	echo "<span class=form></span><input class=form type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br class=form />\n";
+	echo "<span class=form></span><input class=form type=text id=email name=email placeholder='Email Address' value=\"$email\" size=40><br class=form />\n";
+	echo "<span class=form></span><input class=form type=text id=phone name=phone placeholder='Phone Number' value=\"$phone\" size=40><br class=form />\n";
 	echo "<span class=form>School/College</span><span class=formright><input type=text id=school name=school value=\"$school\" size=40></span><br class=form />\n";
 	echo "<span class=form>Requested Username</span><span class=formright><input type=text id=SID name=SID value=\"$username\" size=40></span><br class=form />\n";
 	echo "<span class=form>Requested Password</span><span class=formright><input type=password id=pw1 name=pw1 size=40></span><br class=form />\n";
@@ -109,6 +111,8 @@
 	echo "<span class=form>I have read and agree to the Terms of Use (below)</span><span class=formright><input type=checkbox id=agree name=agree></span><br class=form />\n";
 	echo "<div class=submit><input type=submit value=\"Request Account\"></div>\n";
 	echo "</form>\n";
+	echo "</div>";
+
 	echo "<h4>Terms of Use</h4>\n";
 	echo "<p><em>This software is made available with <strong>no warranty</strong> and <strong>no guarantees</strong>.  The ";
 	echo "server or software might crash or mysteriously lose all your data.  Your account or this service may be terminated without warning.  ";
