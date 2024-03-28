@@ -63,7 +63,8 @@
 			$message .= "School: {$_POST['school']} <br/>\n";
 			$message .= "Phone: {$_POST['phone']} <br/>\n";
 			$message .= "Username: {$_POST['SID']} <br/>\n";
-			
+
+
 			require_once("./includes/email.php");
 			
 			send_email($sendfrom, $sendfrom, $subject, $message, array(), array(), 10); 
@@ -108,18 +109,35 @@
 	echo "<input class='instructor-signup-input' type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
 	echo "<input class='instructor-signup-input' type=password id=pw1 name=pw1 placeholder='Requested Password' size=40><br/>\n";
 	echo "<input class='instructor-signup-input' type=password id=pw2 name=pw2 placeholder='Retype Password' size=40><br />\n";
-	echo "<span>I have read and agree to the Terms of Use</span><input type=checkbox id=agree name=agree><br/>\n";
+	echo "<input type=checkbox id=agree name=agree><label for='agree'>I have read and agree to the <a href='#' onclick='openTermsPopup(); return false;'>Terms of Use</a>.</label><br/>\n";
+	echo "<div id='termsPopup' class='popup-container' style='display:none;'>
+			<div class='popup-content'>
+				<h4>Terms of Use</h4>
+				<div class='popup-text'>
+					<p><em>This software is made available with <strong>no warranty</strong> and <strong>no guarantees</strong>. 
+					The server or software might crash or mysteriously lose all your data.  Your account or this service may be 
+					terminated without warning.  No official support is provided. </em></p>
+					<p><em>Copyrighted materials should not be posted or used in questions without the permission of the copyright owner.  
+					You shall be solely responsible for your own user created content and the consequences of posting or publishing them.  
+					This site expressly disclaims any and all liability in connection with user created content.</em></p>
+				</div>
+				<button onclick='closeTermsPopup();'>Close</button>
+			</div>
+		  </div>";
+
 	echo "<div class=submit><input type=submit value=\"Request Account\"></div>\n";
 	echo "</form>\n";
+
 	echo "</div>";
 
-	echo "<h4>Terms of Use</h4>\n";
-	echo "<p><em>This software is made available with <strong>no warranty</strong> and <strong>no guarantees</strong>.  The ";
-	echo "server or software might crash or mysteriously lose all your data.  Your account or this service may be terminated without warning.  ";
-	echo "No official support is provided. </em></p>\n";
-	echo "<p><em>Copyrighted materials should not be posted or used in questions without the permission of the copyright owner.  You shall be solely ";
-	echo "responsible for your own user created content and the consequences of posting or publishing them.  This site expressly disclaims any and all liability in ";
-	echo "connection with user created content.</em></p>";
 	showNewUserValidation('newinstrform',$required);
+	echo "<script>
+		function openTermsPopup() {
+			document.getElementById('termsPopup').style.display = 'flex';
+		}
+		function closeTermsPopup() {
+			document.getElementById('termsPopup').style.display = 'none';
+		}
+	</script>";
 	require("footer.php");
 ?>

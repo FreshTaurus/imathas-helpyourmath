@@ -170,5 +170,29 @@ color: #fff;
 	margin: 5px 0;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
+}
 
+.popup-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1001;
+}
+.popup-content {
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 80%;
+	max-width: 500px;
+	margin-bottom: 20px;
+}
+.popup-text{
+	text-align: left;
 }
