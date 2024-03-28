@@ -100,15 +100,15 @@
 	echo "<h3 style='font-size: 37px; color: #00cc00;'>New Instructor Account Request</h3>\n";
 	echo "<form method=post id=newinstrform class=limitaftervalidate action=\"newinstructor.php\">\n";
 
-	echo "<span class=form></span><input class=form type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br class=form >\n";
-	echo "<span class=form></span><input class=form type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br class=form />\n";
-	echo "<span class=form></span><input class=form type=text id=email name=email placeholder='Email Address' value=\"$email\" size=40><br class=form />\n";
-	echo "<span class=form></span><input class=form type=text id=phone name=phone placeholder='Phone Number' value=\"$phone\" size=40><br class=form />\n";
-	echo "<span class=form>School/College</span><span class=formright><input type=text id=school name=school value=\"$school\" size=40></span><br class=form />\n";
-	echo "<span class=form>Requested Username</span><span class=formright><input type=text id=SID name=SID value=\"$username\" size=40></span><br class=form />\n";
-	echo "<span class=form>Requested Password</span><span class=formright><input type=password id=pw1 name=pw1 size=40></span><br class=form />\n";
-	echo "<span class=form>Retype Password</span><span class=formright><input type=password id=pw2 name=pw2 size=40></span><br class=form />\n";
-	echo "<span class=form>I have read and agree to the Terms of Use (below)</span><span class=formright><input type=checkbox id=agree name=agree></span><br class=form />\n";
+	echo "<input type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br/>\n";
+	echo "<input type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br/>\n";
+	echo "<input type=text id=email name=email placeholder='Email Address' value=\"$email\" size=40><br/>\n";
+	echo "<input type=text id=phone name=phone placeholder='Phone Number' value=\"$phone\" size=40><br/>\n";
+	echo "<input type=text id=school name=school placeholder='School/College' value=\"$school\" size=40><br/>\n";
+	echo "<input type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
+	echo "<input type=password id=pw1 name=pw1 placeholder='Requested Password' size=40><br/>\n";
+	echo "<input type=password id=pw2 name=pw2 placeholder='Retype Password' size=40><br />\n";
+	echo "<span>I have read and agree to the Terms of Use</span><input type=checkbox id=agree name=agree><br/>\n";
 	echo "<div class=submit><input type=submit value=\"Request Account\"></div>\n";
 	echo "</form>\n";
 	echo "</div>";
