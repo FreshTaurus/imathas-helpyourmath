@@ -46,7 +46,7 @@ echo '<style>
     height: 50px;
     margin: 5px 0;
     border-radius: 5px;
-    border: 1px solid #6d6d6d; S
+    border: 1px solid #6d6d6d;
 }
 </style>';
 
@@ -57,7 +57,7 @@ switch($_GET['action']) {
 		}
 		echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
 		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 44px; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
-		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 40%; height: auto;' method=post action=\"actions.php?action=newuser$gb\">\n";
+		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 40%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
 		echo "<input class='signup-input' placeholder='Username' type='text' size=12 id=SID name=SID><br/>\n";
 		echo "<span><label for=\"SID\">$longloginprompt</label></span><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Choose a password' size=20 id=pw1 name=pw1><br/>\n";
@@ -120,6 +120,7 @@ switch($_GET['action']) {
 				echo '<script type="text/javascript"> function courseselectupdate(el) { var c = document.getElementById("courseinfo"); var c2 = document.getElementById("selfenrollwarn"); ';
 				echo 'if (el.value==0) {c.style.display="";c2.style.display="none";} else {c.style.display="none";c2.style.display="";}}</script>';
 			} else {
+				echo '<div class="known-id" style="width:80%; display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;">';
                 if (isset($CFG['GEN']['COPPA'])) {
                     echo '<p class="fullopt" style="display:none">';
                 } else {
@@ -138,9 +139,11 @@ switch($_GET['action']) {
                     $(".limitedopt").toggle(!chked);
                 }</script>';
             }
-
-			echo '<span class="form"><label for="courseid">',_('Course ID'),':</label></span><input class="form" type="text" size="20" name="courseid" id="courseid"/><br class="form"/>';
-			echo '<span class="form"><label for="ekey">',_('Enrollment Key'),':</label></span><input class="form" type="text" size="20" name="ekey" id="ekey"/><br class="form"/>';
+			echo '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;">';
+			echo '<input style="width: 100%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Course ID" size="20" name="courseid" id="courseid"/><br/>';
+			echo '<input style="width: 100%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Enrollment Key" size="20" name="ekey" id="ekey"/><br/>';
+			echo '</div>';
+			echo '</div>';
 			if ($doselfenroll) {
 				echo '</div>';
 				echo '<div id="selfenrollwarn" class=noticetext style="display:none;">',_('Warning: You have selected a non-credit self-study course. ');
@@ -480,6 +483,7 @@ switch($_GET['action']) {
 		if ($doselfenroll) {
 			echo '</div>';
 			echo '<div id="selfenrollwarn" class=noticetext style="display:none;">',_('Warning: You have selected a non-credit self-study course. ');
+
 			echo sprintf(_('If you are using %s with an instructor-led course, this is NOT what you want; nothing you do in the self-study course will be viewable by your instructor or count towards your course. For an instructor-led course, you need to enter the course ID and key provided by your instructor.'),$installname);
 			echo '</div>';
 		}
