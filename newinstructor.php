@@ -103,7 +103,7 @@
 
 	echo "<input class='instructor-signup-input' type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br/>\n";
 	echo "<input class='instructor-signup-input' type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=text id=email name=email placeholder='Email Address' value=\"$email\" size=40><br/>\n";
+	echo "<input class='instructor-signup-input' type=text id=email name=email placeholder='College Email' value=\"$email\" size=40><br/>\n";
 	echo "<input class='instructor-signup-input' type=text id=phone name=phone placeholder='Phone Number' value=\"$phone\" size=40><br/>\n";
 	echo "<input class='instructor-signup-input' type=text id=school name=school placeholder='School/College' value=\"$school\" size=40><br/>\n";
 	echo "<input class='instructor-signup-input' type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
