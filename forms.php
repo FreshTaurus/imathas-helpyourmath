@@ -42,11 +42,11 @@ require_once "header.php";
 echo '<style>
 .signup-input{
     background-color: #dbdd80;
-    width: 300px;
-    height: 35px;
+    width: 49%;
+    height: 50px;
     margin: 5px 0;
     border-radius: 5px;
-    border: 1px solid #6d6d6d; 
+    border: 1px solid #6d6d6d; S
 }
 </style>';
 
@@ -56,17 +56,17 @@ switch($_GET['action']) {
 			echo "<div class=breadcrumb><a href=\"index.php\">Home</a> &gt; ",_('New Student Signup'),"</div>\n";
 		}
 		echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
-		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 40px; color: #00cc00;">',_('New Student Signup'),'</h1></div>';
-		echo "<form id=\"newuserform\" class=limitaftervalidate method=post action=\"actions.php?action=newuser$gb\">\n";
-		echo "<span class=form><label for=\"SID\">$longloginprompt:</label></span> <input class=\"form pii-username\" type=\"text\" size=12 id=SID name=SID><BR class=\"form\">\n";
-
+		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 44px; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
+		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 40%; height: auto;' method=post action=\"actions.php?action=newuser$gb\">\n";
+		echo "<input class='signup-input' placeholder='Username' type='text' size=12 id=SID name=SID><br/>\n";
+		echo "<span><label for=\"SID\">$longloginprompt</label></span><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Choose a password' size=20 id=pw1 name=pw1><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Confirm password' size=20 id=pw2 name=pw2><br/>\n";
-
 		echo "<input class='signup-input' type='text' placeholder='First Name' size=20 id=firstname name=firstname autocomplete='given-name'><br/>\n";
-		echo "<span class=\"form\"><label for=\"lastname\">",_('Enter Last Name:'),"</label></span> <input class=\"form pii-last-name\" type=\"text\" size=20 id=lastname name=lastname autocomplete=\"family-name\"><BR class=\"form\">\n";
-		echo "<span class=\"form\"><label for=\"email\">",_('Enter E-mail address:'),"</label></span>  <input class=\"form pii-email\" type=\"text\" size=60 id=email name=email autocomplete=\"email\"><BR class=\"form\">\n";
-		echo "<span class=form><label for=\"msgnot\">",_('Notify me by email when I receive a new message:'),"</label></span><span class=formright><input type=checkbox id=msgnot name=msgnot checked=\"checked\" /></span><BR class=form>\n";
+		echo "<input class='signup-input' type='text' placeholder='Last Name' size=20 id=lastname name=lastname autocomplete='family-name'><br/>\n";
+		echo "<input class='signup-input' type='text' placeholder='Email Address' size=60 id=email name=email autocomplete='email'><br/>\n";
+		echo "<input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot'>Notify me by email when I receive a new message.</label><br/>\n";
+
         if (isset($CFG['GEN']['COPPA'])) {
 			echo "<span class=form><label for=\"over13\">",_('I am 13 years old or older'),"</label></span><span class=formright><input type=checkbox name=over13 id=over13 onchange=\"toggleOver13()\"></span><br class=form />\n";
         }

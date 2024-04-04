@@ -15,7 +15,7 @@ $installname = "Help Your Math";
 
 //login prompts
 $loginprompt = "Username";
-$longloginprompt = "Enter a username.  Use only numbers, letters, or the _ character.";
+$longloginprompt = "Use only numbers, letters, or the _ character for username";
 $loginformat = '/^[\w+\-]+$/';
 
 //require email confirmation of new users?
