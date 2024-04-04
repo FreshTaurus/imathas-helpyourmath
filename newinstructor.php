@@ -101,14 +101,14 @@
 	echo "<h3 style='font-size: 37px; color: #00cc00;'>New Instructor Account Request</h3>\n";
 	echo "<form method=post id=newinstrform class=limitaftervalidate action=\"newinstructor.php\">\n";
 
-	echo "<input class='instructor-signup-input' type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=text id=email name=email placeholder='College Email' value=\"$email\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=text id=phone name=phone placeholder='Phone Number' value=\"$phone\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=text id=school name=school placeholder='School/College' value=\"$school\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=password id=pw1 name=pw1 placeholder='Requested Password' size=40><br/>\n";
-	echo "<input class='instructor-signup-input' type=password id=pw2 name=pw2 placeholder='Retype Password' size=40><br />\n";
+	echo "<input class='signup-input' type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br/>\n";
+	echo "<input class='signup-input' type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br/>\n";
+	echo "<input class='signup-input' type=text id=email name=email placeholder='College Email' value=\"$email\" size=40><br/>\n";
+	echo "<input class='signup-input' type=text id=phone name=phone placeholder='Phone Number' value=\"$phone\" size=40><br/>\n";
+	echo "<input class='signup-input' type=text id=school name=school placeholder='School/College' value=\"$school\" size=40><br/>\n";
+	echo "<input class='signup-input' type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
+	echo "<input class='signup-input' type=password id=pw1 name=pw1 placeholder='Requested Password' size=40><br/>\n";
+	echo "<input class='signup-input' type=password id=pw2 name=pw2 placeholder='Retype Password' size=40><br />\n";
 	echo "<input type=checkbox id=agree name=agree><label for='agree'>I have read and agree to the <a href='#' onclick='openTermsPopup(); return false;'>Terms of Use</a>.</label><br/>\n";
 	echo "<div id='termsPopup' class='popup-container' style='display:none;'>
 			<div class='popup-content'>
