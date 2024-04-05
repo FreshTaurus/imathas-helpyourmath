@@ -99,7 +99,7 @@
 
 	echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
 	echo "<h3 style='font-size: 37px; color: #00cc00;'>New Instructor Account Request</h3>\n";
-	echo "<form method=post id=newinstrform class=limitaftervalidate action=\"newinstructor.php\">\n";
+	echo "<form method=post id=newinstrform class=limitaftervalidate style='width: 40%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' action=\"newinstructor.php\">\n";
 
 	echo "<input class='signup-input' type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br/>\n";
 	echo "<input class='signup-input' type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br/>\n";
@@ -109,7 +109,7 @@
 	echo "<input class='signup-input' type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
 	echo "<input class='signup-input' type=password id=pw1 name=pw1 placeholder='Requested Password' size=40><br/>\n";
 	echo "<input class='signup-input' type=password id=pw2 name=pw2 placeholder='Retype Password' size=40><br />\n";
-	echo "<input type=checkbox id=agree name=agree><label for='agree'>I have read and agree to the <a href='#' onclick='openTermsPopup(); return false;'>Terms of Use</a>.</label><br/>\n";
+	echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center; font-size: 23px;'><input type=checkbox id=agree name=agree><label for='agree'>I have read and agree to the <a style='text-decoration: underline;' href='#' onclick='openTermsPopup(); return false;'>Terms of Use</a>.</label></div><br/>\n";
 	echo "<div id='termsPopup' class='popup-container' style='display:none;'>
 			<div class='popup-content'>
 				<h4>Terms of Use</h4>
@@ -125,7 +125,7 @@
 			</div>
 		  </div>";
 
-	echo "<div><input class=instructor-submit-btn type=submit value=\"Request Account\"></div>\n";
+	echo "<div><input class=instructor-submit-btn type=submit style='font-size: 20px;' value=\"Request Account\"></div>\n";
 	echo "</form>\n";
 
 	echo "</div>";
