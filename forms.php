@@ -67,16 +67,16 @@ switch($_GET['action']) {
 			echo "<div class=breadcrumb><a href=\"index.php\">Home</a> &gt; ",_('New Student Signup'),"</div>\n";
 		}
 		echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
-		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 44px; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
-		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 40%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
+		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 3em; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
+		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 55%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
+		echo "<span><label for=\"SID\" style='font-size: 1.3em;'>$longloginprompt</label></span><br/>\n";
 		echo "<input class='signup-input' placeholder='Username' type='text' size=12 id=SID name=SID><br/>\n";
-		echo "<span><label for=\"SID\" style='font-size: 25px;'>$longloginprompt</label></span><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Choose a password' size=20 id=pw1 name=pw1><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Confirm password' size=20 id=pw2 name=pw2><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='First Name' size=20 id=firstname name=firstname autocomplete='given-name'><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='Last Name' size=20 id=lastname name=lastname autocomplete='family-name'><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='Email Address' size=60 id=email name=email autocomplete='email'><br/>\n";
-		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' style='font-size: 28px;'>Notify me by email when I receive a new message.</label></div><br/>\n";
+		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' style='font-size: 1.3em;'>Notify me by email when I receive a new message.</label></div><br/>\n";
 
         if (isset($CFG['GEN']['COPPA'])) {
 			echo "<span class=form><label for=\"over13\">",_('I am 13 years old or older'),"</label></span><span class=formright><input type=checkbox name=over13 id=over13 onchange=\"toggleOver13()\"></span><br class=form />\n";
@@ -150,9 +150,9 @@ switch($_GET['action']) {
                     $(".limitedopt").toggle(!chked);
                 }</script>';
             }
-			echo '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center; width: 50%; margin: 2px 0;">';
-			echo '<input style="width: 90%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Course ID" size="20" name="courseid" id="courseid"/><br/>';
-			echo '<input style="width: 90%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Enrollment Key" size="20" name="ekey" id="ekey"/><br/>';
+			echo '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center; width: 90%; margin: 5px 5px;">';
+			echo '<input style="width: 90%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Course ID" size="20" name="courseid" id="courseid"/>';
+			echo '<input style="width: 90%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Enrollment Key" size="20" name="ekey" id="ekey"/>';
 			echo '</div>';
 			echo '</div>';
 			if ($doselfenroll) {
