@@ -167,6 +167,7 @@ switch($_GET['action']) {
 		echo '<input type=hidden name=challenge value="'.Sanitize::encodeStringForDisplay($_SESSION['challenge']).'"/>';
 		echo '<span class="sr-only"><label aria-hidden=true">Do not fill this out <input name=hval tabindex="-1"></label></span>';
 		echo "<div class='submit' style='display: flex; align-content: center; justify-content: center; align-items: center;'><input class='student-submit-btn' style='font-size: 20px;' type=submit value='",_('Sign Up'),"'></div>\n";
+		echo "<br/>";
 		echo "</form>\n";
 		echo "</div>";
 
