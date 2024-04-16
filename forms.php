@@ -39,6 +39,9 @@ if ($_GET['action']=='chguserinfo') {
 	$placeinhead .= "<script type=\"text/javascript\" src=\"$staticroot/javascript/jstz_min.js\" ></script>";
 }
 require_once "header.php";
+//require("header.php");
+require("infoheader.php");
+
 echo '<style>
 .signup-input{
     background-color: #dbdd80;
@@ -63,10 +66,7 @@ echo '<style>
 
 switch($_GET['action']) {
 	case "newuser":
-		if ($gb == '') {
-			echo "<div class=breadcrumb><a href=\"index.php\">Home</a> &gt; ",_('New Student Signup'),"</div>\n";
-		}
-		echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
+		echo "<div class='centered-container' style='width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
 		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 2em; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
 		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 58%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
 		echo "<span><label for=\"SID\" style='font-size: 1.1em;'>$longloginprompt</label></span><br/>\n";
