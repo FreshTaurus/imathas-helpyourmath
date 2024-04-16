@@ -98,8 +98,8 @@
 	if (isset($_POST['SID'])) {$username=Sanitize::encodeStringForDisplay($_POST['SID']);} else {$username='';}
 
 	echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
-	echo "<h3 style='font-size: 3em; color: #00cc00;'>New Instructor Account Request</h3>\n";
-	echo "<form method=post id=newinstrform class=limitaftervalidate style='width: 55%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' action=\"newinstructor.php\">\n";
+	echo "<h3 style='font-size: 2em; color: #00cc00;'>New Instructor Account Request</h3>\n";
+	echo "<form method=post id=newinstrform class=limitaftervalidate style='width: 58%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' action=\"newinstructor.php\">\n";
 
 	echo "<input class='signup-input' type=text id=firstname name=firstname placeholder='First Name' value=\"$firstname\" size=40><br/>\n";
 	echo "<input class='signup-input' type=text id=lastname name=lastname placeholder='Last Name' value=\"$lastname\" size=40><br/>\n";
@@ -109,7 +109,7 @@
 	echo "<input class='signup-input' type=text id=SID name=SID placeholder='Requested Username' value=\"$username\" size=40><br/>\n";
 	echo "<input class='signup-input' type=password id=pw1 name=pw1 placeholder='Requested Password' size=40><br/>\n";
 	echo "<input class='signup-input' type=password id=pw2 name=pw2 placeholder='Retype Password' size=40><br />\n";
-	echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center; font-size: 1.3em;'><input type=checkbox id=agree name=agree><label for='agree'>I have read and agree to the <a style='text-decoration: underline;' href='#' onclick='openTermsPopup(); return false;'>Terms of Use</a>.</label></div><br/>\n";
+	echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center; font-size: 1.1em;'><input type=checkbox id=agree name=agree><label for='agree'>I have read and agree to the <a style='text-decoration: underline;' href='#' onclick='openTermsPopup(); return false;'>Terms of Use</a>.</label></div><br/>\n";
 	echo "<div id='termsPopup' class='popup-container' style='display:none;'>
 			<div class='popup-content'>
 				<h4>Terms of Use</h4>

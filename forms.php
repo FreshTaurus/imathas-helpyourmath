@@ -67,16 +67,16 @@ switch($_GET['action']) {
 			echo "<div class=breadcrumb><a href=\"index.php\">Home</a> &gt; ",_('New Student Signup'),"</div>\n";
 		}
 		echo "<div class='centered-container' style='display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
-		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 3em; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
-		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 55%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
-		echo "<span><label for=\"SID\" style='font-size: 1.3em;'>$longloginprompt</label></span><br/>\n";
+		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 2em; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
+		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 58%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
+		echo "<span><label for=\"SID\" style='font-size: 1.1em;'>$longloginprompt</label></span><br/>\n";
 		echo "<input class='signup-input' placeholder='Username' type='text' size=12 id=SID name=SID><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Choose a password' size=20 id=pw1 name=pw1><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Confirm password' size=20 id=pw2 name=pw2><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='First Name' size=20 id=firstname name=firstname autocomplete='given-name'><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='Last Name' size=20 id=lastname name=lastname autocomplete='family-name'><br/>\n";
-		echo "<input class='signup-input' type='text' placeholder='Email Address' size=60 id=email name=email autocomplete='email'><br/>\n";
-		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' style='font-size: 1.3em;'>Notify me by email when I receive a new message.</label></div><br/>\n";
+		echo "<input class='signup-input' type='text' placeholder='School Email or Personal Email' size=60 id=email name=email autocomplete='email'><br/>\n";
+		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' style='font-size: 1.1em;'>Notify me by email when I receive a new message.</label></div><br/>\n";
 
         if (isset($CFG['GEN']['COPPA'])) {
 			echo "<span class=form><label for=\"over13\">",_('I am 13 years old or older'),"</label></span><span class=formright><input type=checkbox name=over13 id=over13 onchange=\"toggleOver13()\"></span><br class=form />\n";
@@ -135,7 +135,7 @@ switch($_GET['action']) {
                 if (isset($CFG['GEN']['COPPA'])) {
                     echo '<p class="fullopt" style="display:none">';
                 } else {
-                    echo '<p style="font-size: 20px;">';
+                    echo '<p style="font-size: 1.1em;">';
                 }
                 echo _('If you already know your course ID, you can enter it now.  Otherwise, leave this blank and you can enroll later.'),'</p>';
                 if (isset($CFG['GEN']['COPPA'])) {
