@@ -4,7 +4,7 @@
 </div>
 
 <ul id="navlist">
-<li><a href="<?php echo $imasroot; ?>/index.php">About Us</a></li>
+<li><a href="<?php echo $imasroot; ?>/index.php">Home</a></li>
 <li><a href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a></li>
 </ul>
 
