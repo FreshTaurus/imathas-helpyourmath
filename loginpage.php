@@ -54,7 +54,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         <img src="./loginpage.jpeg" style=" height: 85%; width:85%; ">
     </div>
     <div id="loginbox">
-    <form style="width: 80%;" method="post" action="<?php echo $loginFormAction;?>">
+    <form style="width: 90%;" method="post" action="<?php echo $loginFormAction;?>">
     <?php
         if ($haslogin) {
             if ($badsession) {
