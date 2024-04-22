@@ -81,13 +81,25 @@ div#header {
 }
 
 #loginbox {
-	float: right;
-	background-color: #EEEEFF;
+	display: flex;
+	/*background-color: #EEEEFF;*/
 	margin-right: 0px;
 	margin-left: 20px;
 	margin-bottom: 10px;
-	width: 230px;
+	width: 30%;
 	border: 1px solid #000000;
+}
+
+.login-input-box{
+	width: 300px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.login-input{
+	width: 250px;
+	height: 100px;
 }
 
 ul#navlist

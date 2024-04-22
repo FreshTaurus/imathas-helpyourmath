@@ -27,7 +27,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 ?>
 	
 
-<div style="display: flex; flex-direction: row;justify-content: space-between;">
+<div style="display: flex; flex-direction: row;justify-content: flex-start;">
 <!--    <div class="text">-->
 <!--        <p>--><?php //echo $installname; ?><!-- is a web based mathematics assessment and course management platform.  </p>-->
 <!--        <img style="float: left; margin-right: 20px;" src="--><?php //echo $imasroot; ?><!--/img/screens.jpg" alt="Computer screens"/>-->
@@ -51,10 +51,10 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 <!--        <p class="textright">--><?php //echo $installname;?><!-- is powered by <a href="http://www.imathas.com">IMathAS</a> &copy; 2006---><?php //echo date("Y");?><!-- David Lippman</p>-->
 <!--    </div>-->
     <div>
-        <img src="./loginpage.jpeg" style=" height: 90%; width:90%; ">
+        <img src="./loginpage.jpeg" style=" height: 85%; width:85%; ">
     </div>
     <div id="loginbox">
-    <form method="post" action="<?php echo $loginFormAction;?>">
+    <form style="width: 80%;" method="post" action="<?php echo $loginFormAction;?>">
     <?php
         if ($haslogin) {
             if ($badsession) {
@@ -70,14 +70,14 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
             }
         }
     ?>
-    <b>Login</b>
+<!--    <b>Login</b>-->
 
     <div><noscript>JavaScript is not enabled.  JavaScript is required for <?php echo $installname; ?>.  Please enable JavaScript and reload this page</noscript></div>
 
-    <table>
-    <tr><td><label for="username"><?php echo $loginprompt;?></label>:</td><td><input type="text" size="15" id="username" name="username" /></td></tr>
-    <tr><td><label for="password">Password</label>:</td><td><input type="password" size="15" id="password" name="password" /></td></tr>
-    </table>
+    <div class="login-input-box">
+    <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
+    <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
+    </div>
     <div class=textright><input type="submit" value="Login"></div>
 
     <div class="textright"><a href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a></div>
