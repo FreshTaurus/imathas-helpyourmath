@@ -50,11 +50,11 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 <!--        <br class=clear>-->
 <!--        <p class="textright">--><?php //echo $installname;?><!-- is powered by <a href="http://www.imathas.com">IMathAS</a> &copy; 2006---><?php //echo date("Y");?><!-- David Lippman</p>-->
 <!--    </div>-->
-    <div>
-        <img src="./loginpage.jpeg" style=" height: 85%; width:85%; ">
+    <div style=" height: 65%; width:65%;">
+        <img src="./loginpage.jpeg" style=" height: 95%; width:95%; ">
     </div>
     <div id="loginbox">
-    <form style="width: 90%;" method="post" action="<?php echo $loginFormAction;?>">
+    <form style="width: 90%; display: flex; flex-direction: column;" method="post" action="<?php echo $loginFormAction;?>">
     <?php
         if ($haslogin) {
             if ($badsession) {
@@ -78,11 +78,14 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
     <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
     </div>
-    <div class=textright><input type="submit" value="Login"></div>
+    <div><input class="login-submit-btn" type="submit" value="Login"></div>
 
-    <div class="textright"><a href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a></div>
-    <div class="textright"><a href="<?php echo $imasroot; ?>/forms.php?action=resetpw">Forgot Password</a><br/>
-    <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a></div>
+    <div><a href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a></div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" style="margin-right: 20px;">Forgot Password</a>
+        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
+    </div>
+    <div><a href="<?php echo $imasroot;?>/newinstructor.php">Request an instructor Account</a></div>
 
     <input type="hidden" id="tzoffset" name="tzoffset" value="">
     <input type="hidden" id="tzname" name="tzname" value="">
