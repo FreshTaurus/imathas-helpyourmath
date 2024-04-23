@@ -83,12 +83,25 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <div>
         <a href="<?php echo $imasroot; ?>/forms.php?action=newuser" class="student-sign-up-button">Register as a new student</a>
     </div>
-    <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px 0;">
-        <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" style="margin-right: 30px;">Forgot Password</a>
-        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
+    <div style="display: flex; flex-direction: row; justify-content:space-between; margin-top: 20px;">
+        <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" >Forgot Password</a>
+        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername" style="margin-right: 30px;">Forgot Username</a>
     </div>
     <div  style="display: flex; flex-direction: row; justify-content: flex-start; margin: 5px 0;">
         <a href="<?php echo $imasroot;?>/newinstructor.php">Request an instructor Account</a>
+    </div>
+    <div>
+        <a href="#" onclick="openHelpYourMathPopup(); return false;">About HelpYourMath</a>
+    </div>
+    <div id="helpYourMathPopup" class="popup-container" style="display:none;">
+            <div class="popup-content">
+                <h4>HelpYourMath Information</h4>
+                <div class="popup-text">
+                    <p>HelpYourMath operates as a non-profit and donation-sponsored, free educational source also known as an Open Education Resources (OER). With support from the college and the exceptional work and dedication of volunteer professors, tutors, and students, we have been able to create full curriculums for various college mathematics courses. The OER team was established and continues to grow every year.</p>
+                    <p>HelpYourMath is an entirely self-functioning open source content site and channel. Although HelpYourMath was initially made to tailor the needs of the BMCC math curriculum, we are prepared to help students around the world from all walks of life. Our OER team believes that sharing is caring, and we are delighted to work with you.</p>
+                </div>
+                <button onclick="closeHelpYourMathPopup();">Close</button>
+            </div>
     </div>
 
 
@@ -103,6 +116,15 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
             document.getElementById("tzname").value = tz.name();
             $("#username").focus();
     });
+    </script>
+    <script>
+            function openHelpYourMathPopup() {
+                document.getElementById('helpYourMathPopup').style.display = 'flex';
+            }
+
+            function closeHelpYourMathPopup() {
+                document.getElementById('helpYourMathPopup').style.display = 'none';
+            }
     </script>
 
     </form>
