@@ -103,7 +103,15 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
                 <button onclick="closeHelpYourMathPopup();">Close</button>
             </div>
     </div>
+        <script>
+            function openHelpYourMathPopup() {
+                document.getElementById('helpYourMathPopup').style.display = 'flex';
+            }
 
+            function closeHelpYourMathPopup() {
+                document.getElementById('helpYourMathPopup').style.display = 'none';
+            }
+        </script>
 
     <input type="hidden" id="tzoffset" name="tzoffset" value="">
     <input type="hidden" id="tzname" name="tzname" value="">
@@ -117,15 +125,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
             $("#username").focus();
     });
     </script>
-    <script>
-            function openHelpYourMathPopup() {
-                document.getElementById('helpYourMathPopup').style.display = 'flex';
-            }
 
-            function closeHelpYourMathPopup() {
-                document.getElementById('helpYourMathPopup').style.display = 'none';
-            }
-    </script>
 
     </form>
     </div>
