@@ -87,7 +87,7 @@ div#header {
 	margin-left: 20px;
 	margin-bottom: 10px;
 	width: 30%;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 }
 
 .login-input-box{
@@ -233,4 +233,23 @@ color: #fff;
 	margin: 5px 0;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
+	padding: 0px 0px;
+}
+
+.student-sign-up-button{
+	width: 95%;
+	height: 100%;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	/*padding: 10px 20px;*/
+	text-align: center;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	margin: 10px 0px;
+	cursor: pointer;
+	border-radius: 5px;
 }

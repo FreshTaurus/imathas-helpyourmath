@@ -78,14 +78,19 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
     <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
     </div>
-    <div><input class="login-submit-btn" type="submit" value="Login"></div>
+    <div><input class="login-submit-btn" style="font-size: 20px;" type="submit" value="Login"></div>
 
-    <div><a href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a></div>
-    <div style="display: flex; flex-direction: row; justify-content: space-between;">
-        <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" style="margin-right: 20px;">Forgot Password</a>
+    <div>
+        <a href="<?php echo $imasroot; ?>/forms.php?action=newuser" class="student-sign-up-button">Register as a new student</a>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: 10px 0;">
+        <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" style="margin-right: 30px;">Forgot Password</a>
         <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
     </div>
-    <div><a href="<?php echo $imasroot;?>/newinstructor.php">Request an instructor Account</a></div>
+    <div  style="display: flex; flex-direction: row; justify-content: flex-start; margin: 5px 0;">
+        <a href="<?php echo $imasroot;?>/newinstructor.php">Request an instructor Account</a>
+    </div>
+
 
     <input type="hidden" id="tzoffset" name="tzoffset" value="">
     <input type="hidden" id="tzname" name="tzname" value="">

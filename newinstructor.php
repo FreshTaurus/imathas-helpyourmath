@@ -125,7 +125,7 @@
 			</div>
 		  </div>";
 
-	echo "<div><input class=instructor-submit-btn type=submit style='font-size: 20px;' value=\"Request Account\"></div>\n";
+	echo "<div><input class=instructor-submit-btn type=submit style='font-size: 20px;' value=\"Request Instructor Account\"></div>\n";
 	echo "</form>\n";
 
 	echo "</div>";
