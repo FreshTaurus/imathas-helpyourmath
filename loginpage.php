@@ -92,7 +92,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     </div>
     <div class="aboutLinks">
     <div>
-        <a href="#" onclick="openHelpYourMathPopup(); return false;">About HelpYourMath</a>
+        <a href="#" onclick="openHelpYourMathPopup(event); return false;">About HelpYourMath</a>
     </div>
     <div id="helpYourMathPopup" class="popup-container" style="display:none;">
             <div class="popup-content">
@@ -101,22 +101,24 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
                     <p>HelpYourMath operates as a non-profit and donation-sponsored, free educational source also known as an Open Education Resources (OER). With support from the college and the exceptional work and dedication of volunteer professors, tutors, and students, we have been able to create full curriculums for various college mathematics courses. The OER team was established and continues to grow every year.</p>
                     <p>HelpYourMath is an entirely self-functioning open source content site and channel. Although HelpYourMath was initially made to tailor the needs of the BMCC math curriculum, we are prepared to help students around the world from all walks of life. Our OER team believes that sharing is caring, and we are delighted to work with you.</p>
                 </div>
-                <div style="text-align: end;"><button onclick="closeHelpYourMathPopup();">Close</button></div>
+                <div style="text-align: end;"><button onclick="closeHelpYourMathPopup(event);">Close</button></div>
             </div>
     </div>
 
         <script>
-            function openHelpYourMathPopup() {
+            function openHelpYourMathPopup(event) {
+                event.preventDefault();
                 document.getElementById('helpYourMathPopup').style.display = 'flex';
             }
 
-            function closeHelpYourMathPopup() {
+            function closeHelpYourMathPopup(event) {
+                event.preventDefault();
                 document.getElementById('helpYourMathPopup').style.display = 'none';
             }
         </script>
 
         <div>
-            <a href="#" onclick="openIMathASPopup(); return false;">About IMathAS</a>
+            <a href="#" onclick="openIMathASPopup(event); return false;">About IMathAS</a>
         </div>
 
         <div id="iMathASPopup" class="popup-container" style="display:none;">
@@ -126,16 +128,18 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
                     <p>IMathAS is a web based mathematics assessment and course management platform.</p>
                     <p>This system is designed for mathematics, providing delivery of homework, quizzes, tests, practice tests, and diagnostics with rich mathematical content. Students can receive immediate feedback on algorithmically generated questions with numerical or algebraic expression answers.</p>
                 </div>
-                <div style="text-align: end;"><button onclick="closeIMathASPopup();">Close</button></div>
+                <div style="text-align: end;"><button onclick="closeIMathASPopup(event);">Close</button></div>
             </div>
         </div>
 
         <script>
-            function openIMathASPopup() {
+            function openIMathASPopup(event) {
+                event.preventDefault();
                 document.getElementById('iMathASPopup').style.display = 'flex';
             }
 
-            function closeIMathASPopup() {
+            function closeIMathASPopup(event) {
+                event.preventDefault();
                 document.getElementById('iMathASPopup').style.display = 'none';
             }
         </script>
