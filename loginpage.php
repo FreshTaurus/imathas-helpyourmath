@@ -117,7 +117,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
             }
         </script>
 
-        <div>
+        <div style="margin-right: 40px;">
             <a href="#" onclick="openIMathASPopup(event); return false;">About IMathAS</a>
         </div>
 
@@ -161,6 +161,10 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 
     </form>
     </div>
+</div>
+<div class="login-copyright">
+    <p>The OER Platform is powered by <a href="http://www.helpyourmath.com">HelpYourMath</a> © 2017-2022 HelpYourMath Team</p>
+    <p>The Homework Platform is powered by <a href="http://www.imathas.com">IMathAS</a> © 2006-2022 David Lippman</p>
 </div>
 <?php 
 	require("footer.php");
