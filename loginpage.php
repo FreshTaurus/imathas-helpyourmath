@@ -78,7 +78,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
     <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
     </div>
-    <div><input class="login-submit-btn" style="font-size: 20px;" type="submit" value="Login"></div>
+    <div><input class="login-submit-btn" style="font-size: 20px;" type="submit" value="Login"/></div>
 
     <div>
         <a href="<?php echo $imasroot; ?>/forms.php?action=newuser" class="student-sign-up-button">Register as a new student</a>
@@ -90,19 +90,21 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <div  style="display: flex; flex-direction: row; justify-content: flex-start; margin: 5px 0;">
         <a href="<?php echo $imasroot;?>/newinstructor.php">Request an instructor Account</a>
     </div>
+    <div class="aboutLinks">
     <div>
         <a href="#" onclick="openHelpYourMathPopup(); return false;">About HelpYourMath</a>
     </div>
     <div id="helpYourMathPopup" class="popup-container" style="display:none;">
             <div class="popup-content">
-                <h4>HelpYourMath Information</h4>
+                <div style="text-align: center; font-weight: bold;"><h4>About HelpYourMath</h4></div>
                 <div class="popup-text">
                     <p>HelpYourMath operates as a non-profit and donation-sponsored, free educational source also known as an Open Education Resources (OER). With support from the college and the exceptional work and dedication of volunteer professors, tutors, and students, we have been able to create full curriculums for various college mathematics courses. The OER team was established and continues to grow every year.</p>
                     <p>HelpYourMath is an entirely self-functioning open source content site and channel. Although HelpYourMath was initially made to tailor the needs of the BMCC math curriculum, we are prepared to help students around the world from all walks of life. Our OER team believes that sharing is caring, and we are delighted to work with you.</p>
                 </div>
-                <button onclick="closeHelpYourMathPopup();">Close</button>
+                <div style="text-align: end;"><button onclick="closeHelpYourMathPopup();">Close</button></div>
             </div>
     </div>
+
         <script>
             function openHelpYourMathPopup() {
                 document.getElementById('helpYourMathPopup').style.display = 'flex';
@@ -112,6 +114,32 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
                 document.getElementById('helpYourMathPopup').style.display = 'none';
             }
         </script>
+
+        <div>
+            <a href="#" onclick="openIMathASPopup(); return false;">About IMathAS</a>
+        </div>
+
+        <div id="iMathASPopup" class="popup-container" style="display:none;">
+            <div class="popup-content">
+                <div style="text-align: center; font-weight: bold;"><h4>About IMathAS</h4></div>
+                <div class="popup-text">
+                    <p>IMathAS is a web based mathematics assessment and course management platform.</p>
+                    <p>This system is designed for mathematics, providing delivery of homework, quizzes, tests, practice tests, and diagnostics with rich mathematical content. Students can receive immediate feedback on algorithmically generated questions with numerical or algebraic expression answers.</p>
+                </div>
+                <div style="text-align: end;"><button onclick="closeIMathASPopup();">Close</button></div>
+            </div>
+        </div>
+
+        <script>
+            function openIMathASPopup() {
+                document.getElementById('iMathASPopup').style.display = 'flex';
+            }
+
+            function closeIMathASPopup() {
+                document.getElementById('iMathASPopup').style.display = 'none';
+            }
+        </script>
+    </div>
 
     <input type="hidden" id="tzoffset" name="tzoffset" value="">
     <input type="hidden" id="tzname" name="tzname" value="">
