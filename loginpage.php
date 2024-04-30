@@ -51,7 +51,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 <!--        <p class="textright">--><?php //echo $installname;?><!-- is powered by <a href="http://www.imathas.com">IMathAS</a> &copy; 2006---><?php //echo date("Y");?><!-- David Lippman</p>-->
 <!--    </div>-->
     <div style=" height: 65%; width:65%;">
-        <img src="./loginpage.jpeg" style=" height: 95%; width:95%; ">
+        <img src="loginImg/loginpage.jpeg" style=" height: 95%; width:95%; ">
     </div>
     <div id="loginbox">
     <form style="width: 90%; display: flex; flex-direction: column;" method="post" action="<?php echo $loginFormAction;?>">
