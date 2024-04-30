@@ -28,28 +28,6 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 	
 
 <div style="display: flex; flex-direction: row;justify-content: flex-start;">
-<!--    <div class="text">-->
-<!--        <p>--><?php //echo $installname; ?><!-- is a web based mathematics assessment and course management platform.  </p>-->
-<!--        <img style="float: left; margin-right: 20px;" src="--><?php //echo $imasroot; ?><!--/img/screens.jpg" alt="Computer screens"/>-->
-<!---->
-<!--        <p>This system is designed for mathematics, providing delivery of homework, quizzes, tests, practice tests,-->
-<!--            and diagnostics with rich mathematical content.  Students can receive immediate feedback on algorithmically generated questions with-->
-<!--            numerical or algebraic expression answers.-->
-<!--        </p>-->
-<!---->
-<!--        <p>If you already have an account, you can log on using the box to the right.</p>-->
-<!--        <p>If you are a new student to the system, <a href="--><?php //echo $imasroot; ?><!--/forms.php?action=newuser">Register as a new student</a></p>-->
-<!--        <p>If you are an instructor, you can <a href="--><?php //echo $imasroot;?><!--/newinstructor.php">request an account</a></p>-->
-<!---->
-<!--        <p>Also available:-->
-<!--        <ul>-->
-<!--            <li><a href="--><?php //echo $imasroot;?><!--/info/enteringanswers.php">Help for student with entering answers</a></li>-->
-<!--            <li><a href="--><?php //echo $imasroot;?><!--/docs/docs.php">Instructor Documentation</a></li>-->
-<!--        </ul>-->
-<!---->
-<!--        <br class=clear>-->
-<!--        <p class="textright">--><?php //echo $installname;?><!-- is powered by <a href="http://www.imathas.com">IMathAS</a> &copy; 2006---><?php //echo date("Y");?><!-- David Lippman</p>-->
-<!--    </div>-->
     <div style=" height: 60%; width:65%; display: flex; justify-content: center;">
         <?php
         $images = array("./loginImg/loginpage.jpeg", "./loginImg/secondimage.jpeg", "./loginImg/thirdimage.jpeg");
