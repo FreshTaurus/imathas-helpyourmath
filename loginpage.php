@@ -82,6 +82,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
                 <div class="popup-text">
                     <p>HelpYourMath operates as a non-profit and donation-sponsored, free educational source also known as an Open Education Resources (OER). With support from the college and the exceptional work and dedication of volunteer professors, tutors, and students, we have been able to create full curriculums for various college mathematics courses. The OER team was established and continues to grow every year.</p>
                     <p>HelpYourMath is an entirely self-functioning open source content site and channel. Although HelpYourMath was initially made to tailor the needs of the BMCC math curriculum, we are prepared to help students around the world from all walks of life. Our OER team believes that sharing is caring, and we are delighted to work with you.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DLpKrC3Rsvk?si=ZxpQI0kDwG9Z31Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div style="text-align: end;"><button onclick="closeHelpYourMathPopup(event);">Close</button></div>
             </div>
