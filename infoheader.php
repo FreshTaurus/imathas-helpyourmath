@@ -1,14 +1,19 @@
-<div id="logo" style="display: flex; flex-direction: row;font-size:20px;">
+<div id="logo" style="display: flex; flex-direction: row;font-size:20px;background-color: #00BF63; color: white;">
     <div style="display: flex; flex-direction: column;">
-        <span style="font-size:65px; color:#00cc00; margin-bottom: 20px;Arial, Helvetica, sans-serif;font-weight: bold;"><i><?php echo $installname; ?></i></span>
+        <span style="font-size:40px; margin-bottom: 10px; font-family: Comic Sans MS; font-weight: bold;"><?php echo $installname; ?></span>
         <span> Welcome to our Free virtual  classroom</span>
     </div>
-    <div>
-        <ul >
-            <li><a href="<?php echo $imasroot; ?>/index.php">Home</a></li>
-            <li><a href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a></li>
-        </ul>
+    <div style="display: flex; flex-direction: row;">
+        <div>
+            <a href="<?php echo $imasroot; ?>/index.php">Home</a>
+        </div>
+        <div>
+            <a href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
+        </div>
     </div>
+</div>
+<div>
+    <div style="background: #bbbbbb; width: 100%;height: 100px; ">Hold for ADs</div>
 </div>
 
 
