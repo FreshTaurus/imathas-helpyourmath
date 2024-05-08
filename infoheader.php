@@ -1,14 +1,14 @@
-<div id="logo" style="display: flex; flex-direction: row;font-size:20px;background-color: #00BF63; color: white;justify-content:space-between;">
+<div id="logo" style="display: flex; flex-direction: row;font-size:23px;background-color: #00BF63; color: white;justify-content:space-between;">
     <div style="display: flex; flex-direction: column;">
         <span style="font-size:40px; margin-bottom: 10px; font-family: Comic Sans MS; font-weight: bold;"><?php echo $installname; ?></span>
         <span> Welcome to our Free virtual  classroom</span>
     </div>
     <div style="display: flex; flex-direction: row;margin-right: 400px;">
         <div style="margin-right: 50px;">
-            <a href="<?php echo $imasroot; ?>/index.php">Home</a>
+            <a style="color: white;" href="<?php echo $imasroot; ?>/index.php">Home</a>
         </div>
         <div>
-            <a href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
+            <a style="color: white;" href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
         </div>
     </div>
 </div>
