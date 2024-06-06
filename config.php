@@ -2,15 +2,16 @@
 //IMathAS Math Config File.  Adjust settings here!
 
 //database access settings
-//$dbserver = "localhost";
-//$dbname = "Mysql";
-//$dbusername = "root";
-//$dbpassword = "eveYY881013";
-
 $dbserver = "localhost";
-$dbname = "imathasdb";
-$dbusername = "imasuser";
-$dbpassword = "chengdu";
+$dbname = "Mysql";
+$dbusername = "root";
+$dbpassword = "eveYY881013";
+
+//need to switch to below in godaddy sever
+//$dbserver = "localhost";
+//$dbname = "imathasdb";
+//$dbusername = "imasuser";
+//$dbpassword = "chengdu";
 
 //error reporting level.  Set to 0 for production servers.
 error_reporting(E_ALL & ~E_NOTICE);
@@ -35,6 +36,8 @@ $colorshift = true;
 //path settings
 //web path to install
 $imasroot = "/helpyourmath";
+//need to switch to below in godaddy sever
+//$imasroot = "";
 
 //base site url - use when generating full URLs to site pages.
 $httpmode = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')
