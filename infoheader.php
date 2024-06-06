@@ -13,7 +13,7 @@
     </div>
 </div>
 <div>
-    <div style="background: #bbbbbb; width: 100%;height: 100px; margin: 5px;">Hold for ADs</div>
+    <div style="background: #bbbbbb; width: 100%;height: 100px; margin: 5px;padding: 0;">Hold for ADs</div>
 </div>
 
 

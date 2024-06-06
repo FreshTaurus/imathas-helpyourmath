@@ -2,10 +2,15 @@
 //IMathAS Math Config File.  Adjust settings here!
 
 //database access settings
+//$dbserver = "localhost";
+//$dbname = "Mysql";
+//$dbusername = "root";
+//$dbpassword = "eveYY881013";
+
 $dbserver = "localhost";
-$dbname = "Mysql";
-$dbusername = "root";
-$dbpassword = "eveYY881013";
+$dbname = "imathasdb";
+$dbusername = "imasuser";
+$dbpassword = "chengdu";
 
 //error reporting level.  Set to 0 for production servers.
 error_reporting(E_ALL & ~E_NOTICE);
