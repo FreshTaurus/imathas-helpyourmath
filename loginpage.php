@@ -28,7 +28,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 	
 
 <div style="display: flex; flex-direction: row;justify-content: flex-start;">
-    <div style=" height: 60%; width:50%; display: flex; justify-content: center;">
+    <div style=" height: 60%; width:65%; display: flex; justify-content: center;">
         <?php
         $images = array("./loginImg/loginpage.jpeg", "./loginImg/secondimage.jpeg", "./loginImg/thirdimage.jpeg");
         $randomImage = $images[array_rand($images)];
