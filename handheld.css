@@ -1,5 +1,5 @@
 div#headercontent, div#navlistcont, .footerwrapper, div#navlistwrapper, .midwrapper {
-	width: auto;
+	width: 100%;
 }
 
 div#leftcolumn, div#rightcolumn  {

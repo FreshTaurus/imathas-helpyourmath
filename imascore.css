@@ -2,16 +2,27 @@ html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+	width: 100%;
 }
 body {
     background-color:#FFFFFF;
 	margin: 10px;
 	padding: 0px;
+	width: 100%;
 }
 div {
 	margin: 0px;
 	padding: 0px;
 }
+
+
+.notfw {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 p {
 	margin: 0;
 	padding: .5em 0;

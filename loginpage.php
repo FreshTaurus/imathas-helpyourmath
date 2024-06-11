@@ -28,7 +28,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 	
 
 <div style="display: flex; flex-direction: row;justify-content: flex-start;">
-    <div style=" height: 60%; width:65%; display: flex; justify-content: center;">
+    <div style=" height: 60%; width:50%; display: flex; justify-content: center;">
         <?php
         $images = array("./loginImg/loginpage.jpeg", "./loginImg/secondimage.jpeg", "./loginImg/thirdimage.jpeg");
         $randomImage = $images[array_rand($images)];
@@ -70,7 +70,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername" style="margin-right: 30px;">Forgot Username</a>
     </div>
     <div  style="display: flex; flex-direction: row; justify-content: flex-start; margin: 5px 0;">
-        <a href="<?php echo $imasroot;?>/newinstructor.php">Request an instructor Account</a>
+        <a href="<?php echo $imasroot;?>/newinstructor.php">Request instructor Account</a>
     </div>
     <div class="aboutLinks">
 <!--    <div>-->
