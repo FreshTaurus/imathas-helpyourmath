@@ -1,10 +1,11 @@
-<div id="logo" style="display: flex; flex-direction: row;font-size:23px;background-color: #00BF63; color: white;justify-content:space-between;">
-    <div style="display: flex; flex-direction: column;">
-        <span style="font-size:40px; margin-bottom: 10px; font-family: Comic Sans MS; font-weight: bold;"><?php echo $installname; ?></span>
+<div id="login-header">
+    <div id="logo" >
+        <span id="header-title"><?php echo $installname; ?></span>
         <span> Welcome to our Free virtual  classroom</span>
     </div>
-    <div style="display: flex; flex-direction: row;margin-right: 400px;">
-        <div style="margin-right: 50px;">
+    <div id="header-navi-link">
+<!--        <div style="margin-right: 50px;">-->
+        <div>
             <a style="color: white;" href="<?php echo $imasroot; ?>/index.php">Home</a>
         </div>
         <div>
@@ -13,7 +14,7 @@
     </div>
 </div>
 <div>
-    <div style="background: #bbbbbb; width: 100%;height: 100px; margin: 5px;padding: 0;">Hold for ADs</div>
+    <div class="ad-container" >Hold for ADs</div>
 </div>
 
 

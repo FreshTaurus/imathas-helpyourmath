@@ -293,3 +293,36 @@ color: #fff;
 	align-items: center;
 	margin-top: 70px;
 }
+
+#login-header {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5vw;
+    background-color: #00BF63;
+    color: white;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#logo {
+	display: flex;
+	flex-direction: column;
+}
+
+#header-title{
+	font-size:2.5vw;
+	margin-bottom: 10px;
+	font-family: Comic Sans MS;
+	font-weight: bold;
+}
+
+#header-navi-link{
+	display: flex;
+	flex-direction: row;
+}
+
+.ad-container {
+    background: #bbbbbb;
+    width: 100%;
+    height: 100px;
+}
