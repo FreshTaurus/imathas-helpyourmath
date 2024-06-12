@@ -7,8 +7,8 @@ form {
 	padding: 0px;
 }
 div {
-	margin-top: 10px;
-	margin-right: 10px;
+	/*margin-top: 10px;*/
+	/*margin-right: 10px;*/
 	padding: 5px;
 }
 
@@ -103,7 +103,7 @@ div#header {
 }
 
 .login-input{
-	width: 95%;
+	width: 100%;
 	height: 40%;
 	margin: 10px 0px;
 	background-color: #DBDD80;
@@ -114,19 +114,25 @@ div#header {
 
 
 .login-input-box .login-input::placeholder{
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	/*color: red;*/
 }
 
-.login-submit-btn{
+.login-submit-btn-div{
 	width: 95%;
-	height: 150%;
-	margin: 10px 0px;
+	height: 15%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 3vw;
+}
+
+.login-submit-btn{
+	width: 100%;
+	height: auto;
 	background-color: #F6F224;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
 	padding: 0 0;
-	margin: 0 0;
 }
 
 ul#navlist
@@ -247,8 +253,8 @@ color: #fff;
 }
 
 .student-sign-up-button{
-	width: 95%;
-	height: 100%;
+	width: 93%;
+	height: 8%;
 	background-color: #4CAF50;
 	border: none;
 	color: white;
@@ -259,7 +265,8 @@ color: #fff;
 	justify-content: center;
 	align-items: center;
 	font-size: 1.3vw;
-	margin: 10px 0px;
+	margin-top: 3vw;
+	margin-left: 0.3vw;
 	cursor: pointer;
 	border-radius: 5px;
 }
@@ -329,9 +336,10 @@ color: #fff;
 }
 
 #header-navi-link{
-	margin-left: 80px;
+	margin-left: 8vw;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 .ad-container {

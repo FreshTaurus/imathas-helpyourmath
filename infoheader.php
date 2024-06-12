@@ -9,7 +9,7 @@
             <a style="color: white;" href="<?php echo $imasroot; ?>/index.php">Home</a>
         </div>
         <div>
-            <a style="color: white;" href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
+            <a style="color: white; margin-left: 2vw;" href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
         </div>
     </div>
 </div>
