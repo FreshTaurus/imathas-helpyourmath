@@ -89,17 +89,26 @@ div#header {
 	display: flex;
 	/*background-color: #EEEEFF;*/
 	margin-right: 0px;
-	margin-left: 20px;
+	margin-left: 1.5vw;
 	margin-bottom: 10px;
 	width: 30%;
 	/*border: 1px solid #000000;*/
 }
 
 .login-input-box{
-	width: 95%;
+	width: 75%;
 	height: 25%;
 	display: flex;
 	flex-direction: column;
+}
+
+@media (max-width: 600px) {
+	.login-input-box{
+		width: 95%;
+		height: 25%;
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .login-input{
@@ -109,31 +118,52 @@ div#header {
 	background-color: #DBDD80;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
-
 }
+
 
 
 .login-input-box .login-input::placeholder{
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	/*color: red;*/
+}
+@media (max-width: 600px) {
+	.login-input-box .login-input::placeholder {
+		font-size: 2.5vw;
+	}
 }
 
 .login-submit-btn-div{
-	width: 95%;
-	height: 15%;
+	width: 75%;
+	height: 10%;
 	display: flex;
 	flex-direction: column;
-	margin-top: 3vw;
+	margin-top: 1vw;
+	padding: 0 2px;
+}
+
+@media (max-width: 600px) {
+	.login-submit-btn-div{
+		width: 95%;
+		height: 10%;
+		display: flex;
+		flex-direction: column;
+		margin-top: 1.2vw;
+	}
 }
 
 .login-submit-btn{
 	width: 100%;
-	height: auto;
-	background-color: #F6F224;
+	height: 100%;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
 	padding: 0 0;
 }
+
+/*@media (max-width: 600px) {*/
+/*	.login-submit-btn{*/
+/*		font-size: 1.6vw;*/
+/*	}*/
+/*}*/
 
 ul#navlist
 {
@@ -253,7 +283,7 @@ color: #fff;
 }
 
 .student-sign-up-button{
-	width: 93%;
+	width: 75%;
 	height: 8%;
 	background-color: #4CAF50;
 	border: none;
@@ -264,11 +294,27 @@ color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.3vw;
-	margin-top: 3vw;
-	margin-left: 0.3vw;
+	font-size: 1.2vw;
+	margin-top: 1vw;
+	/*margin-left: 0.3vw;*/
 	cursor: pointer;
 	border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+	.student-sign-up-button{
+		width: 90%;
+		height: 8%;
+		font-size: 2.2vw;
+		margin-top: 2vw;
+		margin-left: 2px;
+	}
+}
+
+@media (max-width: 600px) {
+	.student-sign-up-button {
+		font-size: 2.2vw;
+	}
 }
 
 .popup-container {
@@ -310,7 +356,7 @@ color: #fff;
 }
 
 .login-copyright p{
-	font-size: 0.6vw;
+	font-size: 0.8vw;
 }
 
 #login-header {
