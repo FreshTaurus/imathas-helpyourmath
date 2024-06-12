@@ -147,7 +147,7 @@ div#header {
 		height: 10%;
 		display: flex;
 		flex-direction: column;
-		margin-top: 1.2vw;
+		margin-top: 2.5vw;
 	}
 }
 
@@ -294,7 +294,7 @@ color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.2vw;
+	font-size: 1vw;
 	margin-top: 1vw;
 	/*margin-left: 0.3vw;*/
 	cursor: pointer;
@@ -305,7 +305,7 @@ color: #fff;
 	.student-sign-up-button{
 		width: 90%;
 		height: 8%;
-		font-size: 2.2vw;
+		font-size: 2vw;
 		margin-top: 2vw;
 		margin-left: 2px;
 	}
@@ -352,11 +352,17 @@ color: #fff;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 2vw;
+	margin-top: 4vw;
 }
 
 .login-copyright p{
 	font-size: 0.8vw;
+}
+
+@media (max-width: 600px) {
+	.login-copyright p{
+		font-size: 2vw;
+	}
 }
 
 #login-header {
@@ -396,11 +402,19 @@ color: #fff;
 
 
 .reset-link{
+	width: 75%;
 	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
-	margin-top: 20px;
+	margin-top: 2vw;
 	font-size: 1vw;
+}
+
+@media (max-width: 600px) {
+	.reset-link{
+		width: 100%;
+		font-size: 1.8vw;
+	}
 }
 
 .instructor-acc-link{
@@ -409,4 +423,10 @@ color: #fff;
 	justify-content: flex-start;
 	margin: 5px 0;
 	font-size: 1.1vw;
+}
+
+@media (max-width: 600px) {
+	.instructor-acc-link{
+		font-size: 2vw;
+	}
 }
