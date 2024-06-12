@@ -11,6 +11,11 @@ div {
 	margin-right: 10px;
 	padding: 5px;
 }
+
+/* input::placeholder {
+    font-size: 1.5vw;
+} */
+
 a:link {
 	text-decoration: none;
 }
@@ -38,7 +43,7 @@ a:hover {
 }
 body {
 	font-family: Arial, Arial, Helvetica, sans-serif;
-	font-size: 95%;
+	/*font-size: 95%;*/
 }
 .content {
 	margin-left: 220px;
@@ -104,9 +109,12 @@ div#header {
 	background-color: #DBDD80;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
+
 }
+
+
 .login-input-box .login-input::placeholder{
-	font-size: 18px;
+	font-size: 1.5vw;
 	/*color: red;*/
 }
 
@@ -197,7 +205,7 @@ color: #fff;
 .signup-input{
 	background-color: #dbdd80;
 	width: 50%;
-	height: 50px;
+	height: auto;
 	margin: 5px 0;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
@@ -250,7 +258,7 @@ color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 16px;
+	font-size: 1.3vw;
 	margin: 10px 0px;
 	cursor: pointer;
 	border-radius: 5px;
@@ -291,7 +299,11 @@ color: #fff;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 70px;
+	margin-top: 2vw;
+}
+
+.login-copyright p{
+	font-size: 0.6vw;
 }
 
 #login-header {
@@ -326,4 +338,21 @@ color: #fff;
     background: #bbbbbb;
     width: 100%;
     height: 100px;
+}
+
+
+.reset-link{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	margin-top: 20px;
+	font-size: 1vw;
+}
+
+.instructor-acc-link{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin: 5px 0;
+	font-size: 1.1vw;
 }

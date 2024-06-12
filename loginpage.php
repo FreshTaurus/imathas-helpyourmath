@@ -57,19 +57,19 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <div><noscript>JavaScript is not enabled.  JavaScript is required for <?php echo $installname; ?>.  Please enable JavaScript and reload this page</noscript></div>
 
     <div class="login-input-box">
-    <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
-    <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
+        <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
+        <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
     </div>
-    <div><input class="login-submit-btn" style="font-size: 20px;" type="submit" value="Login"/></div>
+    <div><input class="login-submit-btn" style="font-size: 1.3vw;" type="submit" value="Login"/></div>
 
     <div>
         <a href="<?php echo $imasroot; ?>/forms.php?action=newuser" class="student-sign-up-button">Register as a new student</a>
     </div>
-    <div style="display: flex; flex-direction: row; justify-content:space-between; margin-top: 20px;">
+    <div class="reset-link">
         <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" >Forgot Password</a>
-        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername" style="margin-right: 30px;">Forgot Username</a>
+        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername" style="margin-left: 4vw;">Forgot Username</a>
     </div>
-    <div  style="display: flex; flex-direction: row; justify-content: flex-start; margin: 5px 0;">
+    <div  class ="instructor-acc-link" >
         <a href="<?php echo $imasroot;?>/newinstructor.php">Request instructor Account</a>
     </div>
     <div class="aboutLinks">
