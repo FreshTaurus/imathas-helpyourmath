@@ -7,7 +7,7 @@ form {
 	padding: 0px;
 }
 div {
-	/*margin-top: 10px;*/
+	/*margin-top: 1vw;*/
 	/*margin-right: 10px;*/
 	padding: 5px;
 }
@@ -340,6 +340,15 @@ color: #fff;
 	max-width: 600px;
 }
 
+@media (max-width: 600px) {
+	.popup-content{
+		padding: 5px;
+		max-width: 350px;
+		max-height: 85%;
+		font-size: 2.5vw;
+	}
+}
+
 .aboutLinks{
 	display: flex;
 	flex-direction: row;
@@ -368,11 +377,17 @@ color: #fff;
 #login-header {
     display: flex;
     flex-direction: row;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     background-color: #00BF63;
     color: white;
     justify-content: flex-start;
     width: 100%;
+}
+
+@media (max-width: 600px) {
+	#login-header {
+		font-size: 2.5vw;
+	}
 }
 
 #logo {
@@ -381,10 +396,16 @@ color: #fff;
 }
 
 #header-title{
-	font-size:2.5vw;
+	font-size:1.8vw;
 	margin-bottom: 10px;
 	font-family: Comic Sans MS;
 	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	#header-title {
+		font-size: 2.5vw;
+	}
 }
 
 #header-navi-link{
@@ -397,7 +418,8 @@ color: #fff;
 .ad-container {
     background: #bbbbbb;
     width: 100%;
-    height: 100px;
+    height:5vw;
+	font-size: 1.5vw;
 }
 
 
@@ -421,7 +443,7 @@ color: #fff;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	margin: 5px 0;
+	margin-top: 1.5vw;
 	font-size: 1.1vw;
 }
 
@@ -429,4 +451,11 @@ color: #fff;
 	.instructor-acc-link{
 		font-size: 2vw;
 	}
+}
+
+.login-content-div{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 90%;
 }

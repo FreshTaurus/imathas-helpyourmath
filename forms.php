@@ -52,6 +52,14 @@ echo '<style>
     border-radius: 5px;
     border: 1px solid #6d6d6d;
 }
+@media (max-width: 600px) {
+	.signup-input{
+	    width: 70%;
+    	height: 30px;
+    	margin: 2px 0;
+		font-size: 2.3vw;
+	}
+}
 </style>';
 
 echo '<style>
@@ -62,6 +70,12 @@ echo '<style>
 	margin: 5px 0;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
+}
+
+@media (max-width: 600px) {
+	.student-submit-btn{
+		font-size: 2vw;
+	}
 }
 </style>';
 
