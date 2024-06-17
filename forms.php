@@ -43,6 +43,7 @@ require_once "header.php";
 //require("header.php");
 require("infoheader.php");
 
+
 echo '<style>
 .signup-input{
     background-color: #dbdd80;
@@ -52,17 +53,7 @@ echo '<style>
     border-radius: 5px;
     border: 1px solid #6d6d6d;
 }
-@media (max-width: 600px) {
-	.signup-input{
-	    width: 70%;
-    	height: 30px;
-    	margin: 2px 0;
-		font-size: 2.3vw;
-	}
-}
-</style>';
 
-echo '<style>
 .student-submit-btn{
 	width: 300px;
 	height: 35px;
@@ -72,9 +63,87 @@ echo '<style>
 	border: 1px #6d6d6d;
 }
 
+.student-sign-up-header{
+	font-size: 2.6vw; 
+	color: #00cc00;
+}
+.student-sign-up-noti{
+	font-size: 1.5vw;
+}
+.student-sign-up-selector{
+	font-size: 1.1em;
+}
+.student-sign-up-course-div{
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: center;
+	text-align: center; 
+	width: 90%; 
+	margin: 5px 5px;
+}
+.known-id{
+	width:50%; 
+	display: flex; 
+	flex-direction: row; 
+	align-items: center; 
+	justify-content: center;
+	text-align: center;
+}
+.student-sign-up-course-div-input{
+	width: 90%; 
+	height: 40px; 
+	border-radius: 5px; 
+	border: 1px solid #6d6d6d; 
+	background-color: #dbdd80; 
+	margin: 5px 0
+}
+
 @media (max-width: 600px) {
+	.signup-input{
+	    width: 70%;
+    	height: 30px;
+    	margin: 2px 0;
+		font-size: 2.3vw;
+	}
 	.student-submit-btn{
 		font-size: 2vw;
+	}
+	.student-sign-up-header{
+		font-size: 4.5vw;
+	}
+	.student-sign-up-noti{
+		font-size: 3vw;
+	}
+	.student-sign-up-selector{
+		font-size: 3vw;
+		width: 85%;
+	}
+	.known-id{
+		width:85%; 
+		display: flex; 
+		flex-direction: row; 
+		align-items: center; 
+		justify-content: center;
+		text-align: center;
+	}
+	.student-sign-up-course-div{
+		display: flex; 
+		flex-direction: column; 
+		align-items: center; 
+		justify-content: center;
+		text-align: center; 
+		width: 100%; 
+		margin: 2px 2px;
+		font-size: 3vw;
+	}
+	.student-sign-up-course-div-input{
+		width: 90%; 
+		height: 8vw; 
+		border-radius: 5px; 
+		border: 1px solid #6d6d6d; 
+		background-color: #dbdd80; 
+		margin: 3px 0
 	}
 }
 </style>';
@@ -82,16 +151,16 @@ echo '<style>
 switch($_GET['action']) {
 	case "newuser":
 		echo "<div class='centered-container' style='width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;'>";
-		echo '<div id="headerforms" class="pagetitle"><h1 style="font-size: 2em; color: #00cc00;">',_('New Student Account Signup'),'</h1></div>';
+		echo '<div id="headerforms" class="pagetitle"><h1 class="student-sign-up-header">',_('New Student Account Signup'),'</h1></div>';
 		echo "<form id=\"newuserform\" class=limitaftervalidate style='width: 58%; height: auto;display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center;' method=post action=\"actions.php?action=newuser$gb\">\n";
-		echo "<span><label for=\"SID\" style='font-size: 1.1em;'>$longloginprompt</label></span><br/>\n";
+		echo "<span><label for=\"SID\" class='student-sign-up-noti'>$longloginprompt</label></span><br/>\n";
 		echo "<input class='signup-input' placeholder='Username' type='text' size=12 id=SID name=SID><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Choose a password' size=20 id=pw1 name=pw1><br/>\n";
 		echo "<input class='signup-input' type='password' placeholder='Confirm password' size=20 id=pw2 name=pw2><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='First Name' size=20 id=firstname name=firstname autocomplete='given-name'><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='Last Name' size=20 id=lastname name=lastname autocomplete='family-name'><br/>\n";
 		echo "<input class='signup-input' type='text' placeholder='School Email or Personal Email' size=60 id=email name=email autocomplete='email'><br/>\n";
-		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' style='font-size: 1.1em;'>Notify me by email when I receive a new message.</label></div><br/>\n";
+		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' class='student-sign-up-selector'>Notify me by email when I receive a new message.</label></div><br/>\n";
 
         if (isset($CFG['GEN']['COPPA'])) {
 			echo "<span class=form><label for=\"over13\">",_('I am 13 years old or older'),"</label></span><span class=formright><input type=checkbox name=over13 id=over13 onchange=\"toggleOver13()\"></span><br class=form />\n";
@@ -146,11 +215,11 @@ switch($_GET['action']) {
 				echo '<script type="text/javascript"> function courseselectupdate(el) { var c = document.getElementById("courseinfo"); var c2 = document.getElementById("selfenrollwarn"); ';
 				echo 'if (el.value==0) {c.style.display="";c2.style.display="none";} else {c.style.display="none";c2.style.display="";}}</script>';
 			} else {
-				echo '<div class="known-id" style="width:50%; display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;">';
+				echo '<div class="known-id">';
                 if (isset($CFG['GEN']['COPPA'])) {
                     echo '<p class="fullopt" style="display:none">';
                 } else {
-                    echo '<p style="font-size: 1.1em;">';
+                    echo '<p class="student-sign-up-selector">';
                 }
                 echo _('If you already know your course ID, you can enter it now.  Otherwise, leave this blank and you can enroll later.'),'</p>';
                 if (isset($CFG['GEN']['COPPA'])) {
@@ -165,9 +234,9 @@ switch($_GET['action']) {
                     $(".limitedopt").toggle(!chked);
                 }</script>';
             }
-			echo '<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;text-align: center; width: 90%; margin: 5px 5px;">';
-			echo '<input style="width: 90%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Course ID" size="20" name="courseid" id="courseid"/>';
-			echo '<input style="width: 90%; height: 40px; border-radius: 5px; border: 1px solid #6d6d6d; background-color: #dbdd80; margin: 5px 0" type="text" placeholder="Enrollment Key" size="20" name="ekey" id="ekey"/>';
+			echo '<div class="student-sign-up-course-div">';
+			echo '<input class="student-sign-up-course-div-input" type="text" placeholder="Course ID" size="20" name="courseid" id="courseid"/>';
+			echo '<input class="student-sign-up-course-div-input" type="text" placeholder="Enrollment Key" size="20" name="ekey" id="ekey"/>';
 			echo '</div>';
 			echo '</div>';
 			if ($doselfenroll) {
