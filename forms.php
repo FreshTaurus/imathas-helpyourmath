@@ -107,7 +107,8 @@ echo '<style>
 		font-size: 2.3vw;
 	}
 	.student-submit-btn{
-		font-size: 2vw;
+		font-size: 2.3vw;
+	    width: 100%;
 	}
 	.student-sign-up-header{
 		font-size: 4.5vw;
@@ -250,7 +251,7 @@ switch($_GET['action']) {
         $_SESSION['newuserstart'] = time();
 		echo '<input type=hidden name=challenge value="'.Sanitize::encodeStringForDisplay($_SESSION['challenge']).'"/>';
 		echo '<span class="sr-only"><label aria-hidden=true">Do not fill this out <input name=hval tabindex="-1"></label></span>';
-		echo "<div class='submit' style='display: flex; align-content: center; justify-content: center; align-items: center;'><input class='student-submit-btn' style='font-size: 20px;' type=submit value='",_('Sign Up'),"'></div>\n";
+		echo "<div class='submit' style='display: flex; align-content: center; justify-content: center; align-items: center;'><input class='student-submit-btn' type=submit value='",_('Sign Up'),"'></div>\n";
 		echo "<br/>";
 		echo "</form>\n";
 		echo "</div>";
