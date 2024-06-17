@@ -47,7 +47,7 @@ require("infoheader.php");
 echo '<style>
 .signup-input{
     background-color: #dbdd80;
-    width: 49%;
+    width: 30%;
     height: 50px;
     margin: 5px 0;
     border-radius: 5px;
@@ -64,11 +64,11 @@ echo '<style>
 }
 
 .student-sign-up-header{
-	font-size: 2.6vw; 
+	font-size: 2vw; 
 	color: #00cc00;
 }
 .student-sign-up-noti{
-	font-size: 1.5vw;
+	font-size: 1vw;
 }
 .student-sign-up-selector{
 	font-size: 1.1em;
@@ -83,7 +83,7 @@ echo '<style>
 	margin: 5px 5px;
 }
 .known-id{
-	width:50%; 
+	width:35%; 
 	display: flex; 
 	flex-direction: row; 
 	align-items: center; 

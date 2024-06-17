@@ -459,3 +459,31 @@ color: #fff;
 	justify-content: flex-start;
 	width: 90%;
 }
+
+.instructor-sign-up-header{
+	font-size: 2em;
+	color: #00cc00;
+}
+@media (max-width: 600px) {
+	.instructor-sign-up-header{
+		font-size: 4.5vw;
+	}
+}
+
+.instructor-signup-input{
+	background-color: #dbdd80;
+	width: 30%;
+	height: 50px;
+	margin: 5px 0;
+	border-radius: 5px;
+	border: 1px solid #6d6d6d;
+}
+
+@media (max-width: 600px) {
+	.instructor-signup-input{
+		width: 70%;
+		height: 30px;
+		margin: 2px 0;
+		font-size: 2.3vw;
+	}
+}
