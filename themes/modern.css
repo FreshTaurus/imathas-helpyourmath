@@ -1,7 +1,13 @@
 /*General settings - fonts, overall page background, etc*/
 body {
 	font-family: "Trebuchet MS", "Arial", "Helvetica", sans-serif;
-	font-size: 90%;
+	font-size: 1.5vw;
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 3vw;
+	}
 }
 
 /*Link styles*/

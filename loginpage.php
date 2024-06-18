@@ -60,7 +60,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
         <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
     </div>
-    <div class="login-submit-btn-div"><input class="login-submit-btn" style="font-size: 1.3vw;" type="submit" value="Login"/></div>
+    <div class="login-submit-btn-div"><input class="login-submit-btn"  type="submit" value="Login"/></div>
 
     <div class="student-sign-up-button">
         <a style="padding: 2px;" href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a>
