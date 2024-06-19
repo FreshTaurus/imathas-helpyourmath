@@ -417,6 +417,12 @@ color: #fff;
 	align-items: center;
 }
 
+@media (max-width: 600px) {
+	#header-navi-link{
+		font-size: 3vw;
+	}
+}
+
 .ad-container {
     background: #bbbbbb;
     width: 100%;
