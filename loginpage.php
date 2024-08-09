@@ -63,7 +63,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     <div class="login-submit-btn-div"><input class="login-submit-btn"  type="submit" value="Login"/></div>
 
     <div class="student-sign-up-button">
-        <a style="padding: 2px;" href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a>
+        <a style="padding: 2px; color: white;" href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a>
     </div>
     <div class="reset-link">
         <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" >Forgot Password</a>

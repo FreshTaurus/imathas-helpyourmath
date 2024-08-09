@@ -152,7 +152,7 @@ div#header {
 }
 
 .login-submit-btn{
-	width: 105%;
+	width: 101.5%;
 	height: 100%;
 	border-radius: 5px;
 	border: 1px #6d6d6d;
@@ -162,6 +162,7 @@ div#header {
 
 @media (max-width: 600px) {
 	.login-submit-btn{
+		width: 105%;
 		font-size: 2.6vw;
 	}
 }
@@ -291,29 +292,28 @@ color: #fff;
 }
 
 .student-sign-up-button{
-	width: 75%;
+	width: 74%;
 	height: 8%;
 	background-color: #4CAF50;
 	border: none;
-	color: white;
 	/*padding: 10px 20px;*/
 	text-align: center;
 	text-decoration: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1vw;
+	font-size: 1.5vw;
 	margin-top: 1vw;
-	/*margin-left: 0.3vw;*/
+	margin-left: 0.3vw;
 	cursor: pointer;
 	border-radius: 5px;
 }
 
 @media (max-width: 600px) {
 	.student-sign-up-button{
-		width: 92%;
+		width: 93%;
 		height: 8%;
-		font-size: 3vw;
+		font-size: 3.3vw;
 		margin-top: 2vw;
 		margin-left: 3px;
 	}
@@ -398,7 +398,7 @@ color: #fff;
 }
 
 #header-title{
-	font-size:1.8vw;
+	font-size:2.8vw;
 	margin-bottom: 10px;
 	font-family: Comic Sans MS;
 	font-weight: bold;
@@ -406,7 +406,7 @@ color: #fff;
 
 @media (max-width: 600px) {
 	#header-title {
-		font-size: 3.5vw;
+		font-size: 3.8vw;
 	}
 }
 
@@ -415,11 +415,12 @@ color: #fff;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	font-size: 2vw;
 }
 
 @media (max-width: 600px) {
 	#header-navi-link{
-		font-size: 3vw;
+		font-size: 3.5vw;
 	}
 }
 
