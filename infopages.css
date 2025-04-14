@@ -97,7 +97,7 @@ div#header {
 
 .login-input-box{
 	width: 75%;
-	height: 25%;
+	height: 38%;
 	display: flex;
 	flex-direction: column;
 }
@@ -105,7 +105,7 @@ div#header {
 @media (max-width: 600px) {
 	.login-input-box{
 		width: 95%;
-		height: 25%;
+		height: 35%;
 		display: flex;
 		flex-direction: column;
 	}
@@ -543,6 +543,8 @@ color: #fff;
 }
 .student-sign-up-selector{
 	font-size: 1.1em;
+	width: 80%;
+	text-align: left;
 }
 .student-sign-up-course-div{
 	display: flex;
@@ -550,7 +552,7 @@ color: #fff;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	width: 90%;
+	width: 70%;
 	margin: 5px 5px;
 }
 .known-id{
@@ -562,12 +564,23 @@ color: #fff;
 	text-align: center;
 }
 .student-sign-up-course-div-input{
-	width: 90%;
+	width: 80%;
 	height: 40px;
 	border-radius: 5px;
 	border: 1px solid #6d6d6d;
 	background-color: #dbdd80;
 	margin: 5px 0
+}
+
+.cuny-id-box{
+	width: 32%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/*font-size: 2.5vw;*/
+}
+.cuny-id-input{
+	width: 65%;
 }
 
 @media (max-width: 600px) {
@@ -588,11 +601,12 @@ color: #fff;
 		font-size: 3vw;
 	}
 	.student-sign-up-selector{
-		font-size: 3vw;
-		width: 85%;
+		font-size: 2.2vw;
+		width: 80%;
+		text-align: left;
 	}
 	.known-id{
-		width:85%;
+		width:90%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -605,7 +619,7 @@ color: #fff;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		width: 100%;
+		width: 70%;
 		margin: 2px 2px;
 		font-size: 3vw;
 	}
@@ -615,6 +629,14 @@ color: #fff;
 		border-radius: 5px;
 		border: 1px solid #6d6d6d;
 		background-color: #dbdd80;
-		margin: 3px 0
+		margin: 3px 0;
+		font-size: 2vw;
+	}
+	.cuny-id-box{
+		width: 75%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-size: 2.5vw;
 	}
 }

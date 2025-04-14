@@ -1,3 +1,8 @@
+<?php
+    include_once("config.php");
+?>
+
+
 <div id="login-header">
     <div id="logo" >
         <span id="header-title"><?php echo $installname; ?></span>
@@ -11,6 +16,11 @@
         <div>
             <a style="color: white; margin-left: 2vw;" href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
         </div>
+
+        <div class="nav-item">
+            <a style="color: white; margin-left: 2vw;" href="<?php echo $imasroot; ?>/nys_math_test.php">Grade 7 Math Test</a>
+        </div>
+
     </div>
 </div>
 <div>

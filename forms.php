@@ -57,6 +57,12 @@ switch($_GET['action']) {
 		echo "<input class='signup-input' type='text' placeholder='School Email or Personal Email' size=60 id=email name=email autocomplete='email'><br/>\n";
 		echo "<div style='display: flex; flex-direction: row; align-items: center; justify-content: center;text-align: center;'><input type=checkbox id=msgnot name=msgnot checked='checked'><label for='msgnot' class='student-sign-up-selector'>Notify me by email when I receive a new message.</label></div><br/>\n";
 
+		echo "<div class='cuny-id-box'>";
+		echo "<input type='checkbox' id='no_cuny_id_checkbox' onclick='toggleNoCUNYInput()'>";
+		echo "<label for='no_cuny_id_checkbox' style='margin-right: 5px;'>I do not have a CUNY ID</label>";
+		echo "<input class='signup-input cuny-id-input' type='text' id='cuny_id' placeholder='CUNY ID' name='cuny_id'><br/>\n";
+		echo "</div>";
+
         if (isset($CFG['GEN']['COPPA'])) {
 			echo "<span class=form><label for=\"over13\">",_('I am 13 years old or older'),"</label></span><span class=formright><input type=checkbox name=over13 id=over13 onchange=\"toggleOver13()\"></span><br class=form />\n";
         }
@@ -114,9 +120,9 @@ switch($_GET['action']) {
                 if (isset($CFG['GEN']['COPPA'])) {
                     echo '<p class="fullopt" style="display:none">';
                 } else {
-                    echo '<p class="student-sign-up-selector">';
+                    echo '<div class="student-sign-up-selector"><p>';
                 }
-                echo _('If you already know your course ID, you can enter it now.  Otherwise, leave this blank and you can enroll later.'),'</p>';
+                echo _('If you already know your course ID, you can enter it now.  Otherwise, leave this blank and you can enroll later.'),'</p></div>';
                 if (isset($CFG['GEN']['COPPA'])) {
                     echo '<p class="limitedopt">'._('Enter the course ID and Key provided by your teacher below').'</p>';
                 }
@@ -149,11 +155,23 @@ switch($_GET['action']) {
 		echo "<br/>";
 		echo "</form>\n";
 		echo "</div>";
+		echo "<script>
+			function toggleNoCUNYInput() {
+				var cunyInput = document.getElementById('cuny_id');
+				var checkbox = document.getElementById('no_cuny_id_checkbox');
+				cunyInput.disabled = checkbox.checked;
+				if (checkbox.checked) {
+					cunyInput.value = '';
+				}
+			}
+    	</script>";
 
 		if (isset($studentTOS)) {
 			require_once $studentTOS;
 		}
 		break;
+
+
 	case "forcechgpwd":
 	case "chgpwd":
         $stm = $DBH->prepare("SELECT mfa FROM imas_users WHERE id=:id");
