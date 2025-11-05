@@ -1,7 +1,7 @@
 {
     "require-dev": {
-        "codeception/codeception": "^2.4",
-        "codeception/c3": "^2.4"
+        "codeception/codeception": "^5.0",
+        "codeception/c3": "^2.0"
     },
 	"config": {
 		"process-timeout": 0
