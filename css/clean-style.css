@@ -36,10 +36,24 @@ body {
 
 #logo {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
     flex: 1;
     min-width: 250px;
+}
+
+.logo-image {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 #header-title {
@@ -469,6 +483,14 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+    
+    #logo {
+        gap: 0.75rem;
+    }
+    
+    .logo-image {
+        height: 40px;
     }
     
     #header-title {

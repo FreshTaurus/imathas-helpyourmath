@@ -6,8 +6,11 @@
 <div id="login-header">
     <div class="header-content">
         <div id="logo">
-            <span id="header-title"><?php echo $installname; ?></span>
-            <span class="header-subtitle">Welcome to our Free Virtual Classroom</span>
+            <img src="<?php echo $imasroot; ?>img/HelpYourMath_Logo.png" alt="HelpYourMath Logo" class="logo-image" />
+            <div class="logo-text">
+                <span id="header-title"><?php echo $installname; ?></span>
+                <span class="header-subtitle">Welcome to our Free Virtual Classroom</span>
+            </div>
         </div>
         <nav id="header-navi-link">
             <a href="<?php echo $imasroot; ?>/index.php">Home</a>
