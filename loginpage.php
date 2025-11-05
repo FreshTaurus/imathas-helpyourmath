@@ -150,11 +150,11 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     </div>
 </div>
 <div class="login-copyright">
-    <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2022 HelpYourMath Team</p>
+    <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2025 HelpYourMath Team</p>
 
 
 
-    <p>The Homework Platform is powered by <a href="#" onclick="openIMathASPopup(event); return false;">IMathAS</a> © 2006-2022 David Lippman</p>
+    <p>The Homework Platform is powered by <a href="#" onclick="openIMathASPopup(event); return false;">IMathAS</a> © 2006-2025 David Lippman</p>
 </div>
 <?php 
 	require("footer.php");
