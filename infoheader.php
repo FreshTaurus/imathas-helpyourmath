@@ -4,27 +4,22 @@
 
 
 <div id="login-header">
-    <div id="logo" >
-        <span id="header-title"><?php echo $installname; ?></span>
-        <span> Welcome to our Free virtual  classroom</span>
-    </div>
-    <div id="header-navi-link">
-<!--        <div style="margin-right: 50px;">-->
-        <div>
-            <a style="color: white;" href="<?php echo $imasroot; ?>/index.php">Home</a>
+    <div class="header-content">
+        <div id="logo">
+            <span id="header-title"><?php echo $installname; ?></span>
+            <span class="header-subtitle">Welcome to our Free Virtual Classroom</span>
         </div>
-        <div>
-            <a style="color: white; margin-left: 2vw;" href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
-        </div>
-
-        <div class="nav-item">
-            <a style="color: white; margin-left: 2vw;" href="<?php echo $imasroot; ?>/nys_math_test.php">Grade 7 Math Test</a>
-        </div>
-
+        <nav id="header-navi-link">
+            <a href="<?php echo $imasroot; ?>/index.php">Home</a>
+            <a href="<?php echo $imasroot; ?>/diag/index.php">Diagnostics</a>
+            <a href="<?php echo $imasroot; ?>/nys_math_test.php">Grade 7 Math Test</a>
+        </nav>
     </div>
 </div>
-<div>
-    <div class="ad-container">ADs</div>
+<div class="ad-wrapper">
+    <div class="ad-container">
+        <span class="ad-placeholder">Advertisement</span>
+    </div>
 </div>
 
 
