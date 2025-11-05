@@ -23,6 +23,9 @@
 
     </div>
 </div>
+<div>
+    <div class="ad-container">ADs</div>
+</div>
 
 
 <!--<div id="header">-->
