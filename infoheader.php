@@ -23,9 +23,6 @@
 
     </div>
 </div>
-<div>
-    <div class="ad-container" >Hold for ADs</div>
-</div>
 
 
 <!--<div id="header">-->

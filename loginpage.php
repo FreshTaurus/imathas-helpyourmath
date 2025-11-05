@@ -4,8 +4,8 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 	exit;
 }
 //any extra CSS, javascript, etc needed for login page
-	$placeinhead = "<link rel=\"stylesheet\" href=\"$imasroot/infopages.css\" type=\"text/css\" />\n";
-	$placeinhead .= "<script type=\"text/javascript\" src=\"$imasroot/javascript/jstz_min.js\" ></script>";
+	$placeinhead = "<link rel=\"stylesheet\" href=\"css/clean-style.css?v=" . time() . "\" type=\"text/css\" />\n";
+	$placeinhead .= "<script type=\"text/javascript\" src=\"javascript/jstz_min.js\" ></script>";
 	$nologo = true;
 	require("header.php");
 	if (!empty($_SERVER['QUERY_STRING'])) {
@@ -28,46 +28,50 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 	
 
 <div class="login-content-div" >
-    <div style=" height: 60%; width:65%; display: flex; justify-content: center;">
-        <?php
-        $images = array("./loginImg/loginpage.jpeg", "./loginImg/secondimage.jpeg", "./loginImg/thirdimage.jpeg");
-        $randomImage = $images[array_rand($images)];
-        ?>
-        <img src="<?php echo $randomImage; ?>" style=" height: 60%; width:65%; ">
-    </div>
     <div id="loginbox">
-    <form style="width: 90%; display: flex; flex-direction: column;" method="post" action="<?php echo $loginFormAction;?>">
+        <div class="login-header">
+            <h1 class="login-title">Welcome Back</h1>
+            <p class="login-subtitle">Sign in to your account to continue</p>
+        </div>
+    <form method="post" action="<?php echo $loginFormAction;?>">
     <?php
         if ($haslogin) {
             if ($badsession) {
                 if (isset($_COOKIE[session_name()])) {
-                    echo 'Problems with session storage';
+                    echo '<div class="error-message"><p>Problems with session storage</p></div>';
                 }  else {
-                    echo '<p>Unable to establish a session.  Check that your browser is set to allow session cookies</p>';
+                    echo '<div class="error-message"><p>Unable to establish a session.  Check that your browser is set to allow session cookies</p></div>';
                 }
             } else if (isset($line['password']) && substr($line['password'],0,8)=='cleared_') {
-                echo '<p>Your password has expired since your account has been unused. Use the Reset Password link below to reset your password.</p>';
+                echo '<div class="error-message"><p>Your password has expired since your account has been unused. Use the Reset Password link below to reset your password.</p></div>';
             } else {
-                echo "<p>Login Error.  Try Again</p>\n";
+                echo '<div class="error-message"><p>Login Error.  Try Again</p></div>';
             }
         }
     ?>
-<!--    <b>Login</b>-->
 
     <div><noscript>JavaScript is not enabled.  JavaScript is required for <?php echo $installname; ?>.  Please enable JavaScript and reload this page</noscript></div>
 
     <div class="login-input-box">
-        <input class="login-input" type="text"  id="username" placeholder="username" name="username" />
-        <input class="login-input" type="password"  id="password" placeholder="password" name="password" />
+        <div class="input-wrapper">
+            <label for="username" class="input-label"><?php echo $loginprompt; ?></label>
+            <input class="login-input" type="text" id="username" placeholder="Enter your username" name="username" autocomplete="username" />
+        </div>
+        <div class="input-wrapper">
+            <label for="password" class="input-label">Password</label>
+            <input class="login-input" type="password" id="password" placeholder="Enter your password" name="password" autocomplete="current-password" />
+        </div>
     </div>
-    <div class="login-submit-btn-div"><input class="login-submit-btn"  type="submit" value="Login"/></div>
+    <div class="login-submit-btn-div">
+        <input class="login-submit-btn" type="submit" value="Sign In"/>
+    </div>
 
     <div class="student-sign-up-button">
-        <a style="padding: 2px; color: white;" href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a>
+        <a href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a>
     </div>
     <div class="reset-link">
         <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" >Forgot Password</a>
-        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername" style="margin-left: 4vw;">Forgot Username</a>
+        <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
     </div>
     <div  class ="instructor-acc-link" >
         <a href="<?php echo $imasroot;?>/newinstructor.php">Request instructor Account</a>

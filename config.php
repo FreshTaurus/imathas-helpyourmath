@@ -2,10 +2,14 @@
 //IMathAS Math Config File.  Adjust settings here!
 
 //database access settings
-$dbserver = "localhost";
+$dbserver = "127.0.0.1";  // Use 127.0.0.1 instead of localhost to force TCP/IP connection
 $dbname = "Mysql";
 $dbusername = "root";
-$dbpassword = "eveYY881013";
+// Current (local development)
+$dbpassword = "";
+
+// Commented out (for production server)
+//$dbpassword = "eveYY881013";
 
 //need to switch to below in godaddy sever
 //$dbserver = "localhost";
@@ -35,7 +39,7 @@ $colorshift = true;
 
 //path settings
 //web path to install
-$imasroot = "/helpyourmath";
+$imasroot = "";
 //need to switch to below in godaddy sever
 //$imasroot = "";
 

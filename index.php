@@ -46,6 +46,7 @@ $showpostsgadget = (in_array(11,$pagelayout[1]) || in_array(11,$pagelayout[0]) |
 $twocolumn = (count($pagelayout[1])>0 && count($pagelayout[2])>0);
 
 $placeinhead = '
+  <link rel="stylesheet" href="css/clean-style.css" type="text/css" />
   <style type="text/css">
    div.pagetitle h2 {
   	margin-top: 0px;
