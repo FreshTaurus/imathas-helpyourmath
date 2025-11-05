@@ -4,7 +4,10 @@
         "codeception/c3": "^2.0"
     },
 	"config": {
-		"process-timeout": 0
+		"process-timeout": 0,
+		"allow-plugins": {
+			"codeception/c3": true
+		}
 	},
 	"scripts": {
 		"start": "php -S localhost:3000 -t .",
