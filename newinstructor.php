@@ -13,11 +13,55 @@
 	$pagetitle = "Instructor Account Request";
 	require("infoheader.php");
 	$required = array('SID','firstname','lastname','email','pw1','pw2','school','phone','agree');
+	
+	// Define fixed authentication code - can be overridden in config.php via $CFG['GEN']['instructorAuthCode']
+	$fixedAuthCode = isset($CFG['GEN']['instructorAuthCode']) ? $CFG['GEN']['instructorAuthCode'] : 'NEW1N5TRUCT0R2025';
+	
+	// Check if authentication code was verified via popup
+	if (isset($_POST['authcode_verified']) && $_POST['authcode_verified'] == '1') {
+		$_SESSION['instructor_auth_verified'] = true;
+		$_SESSION['instructor_auth_time'] = time();
+	}
+	
+	// Verify authentication code before showing form
+	if (!isset($_SESSION['instructor_auth_verified']) || $_SESSION['instructor_auth_verified'] !== true) {
+		// Check if code was provided via direct access (for backwards compatibility)
+		if (isset($_GET['authcode']) && trim($_GET['authcode']) === $fixedAuthCode) {
+			$_SESSION['instructor_auth_verified'] = true;
+			$_SESSION['instructor_auth_time'] = time();
+		} else {
+			echo "<div style='text-align: center; padding: 40px;'>";
+			echo "<h3>Authentication Required</h3>";
+			echo "<p>Please use the 'Request instructor Account' button on the login page to access this form.</p>";
+			echo "<p><a href='".$imasroot."/loginpage.php'>Return to Login Page</a></p>";
+			echo "</div>";
+			require("footer.php");
+			exit;
+		}
+	}
+	
+	// Clear verification after 30 minutes for security
+	if (isset($_SESSION['instructor_auth_time']) && (time() - $_SESSION['instructor_auth_time']) > 1800) {
+		unset($_SESSION['instructor_auth_verified']);
+		unset($_SESSION['instructor_auth_time']);
+		echo "<div style='text-align: center; padding: 40px;'>";
+		echo "<h3>Session Expired</h3>";
+		echo "<p>Your authentication session has expired. Please try again.</p>";
+		echo "<p><a href='".$imasroot."/loginpage.php'>Return to Login Page</a></p>";
+		echo "</div>";
+		require("footer.php");
+		exit;
+	}
 
 	if (isset($_POST['firstname'])) {
 		$error = '';
 		if (!isset($_POST['agree'])) {
 			$error .= "<p>You must agree to the Terms and Conditions to set up an account</p>";
+		}
+		
+		// Verify authentication code is still valid in session
+		if (!isset($_SESSION['instructor_auth_verified']) || $_SESSION['instructor_auth_verified'] !== true) {
+			$error .= "<p>Authentication session expired. Please return to the login page and try again.</p>";
 		}
 
 		$error .= checkNewUserValidation($required);
