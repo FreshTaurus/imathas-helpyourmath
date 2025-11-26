@@ -1,21 +1,12 @@
 <?php
 //IMathAS Math Config File.  Adjust settings here!
 
-//database access settings
-$dbserver = "127.0.0.1";  // Use 127.0.0.1 instead of localhost to force TCP/IP connection
-$dbname = "Mysql";
-$dbusername = "root";
-// Current (local development)
-$dbpassword = "";
-
-// Commented out (for production server)
-//$dbpassword = "eveYY881013";
-
-//need to switch to below in godaddy sever
-//$dbserver = "localhost";
-//$dbname = "imathasdb";
-//$dbusername = "imasuser";
-//$dbpassword = "chengdu";
+//database access settings (support env overrides for cloud hosting)
+$dbserver = getenv('DB_SERVER') ?: "127.0.0.1";  // Use 127.0.0.1 instead of localhost to force TCP/IP connection
+$dbname = getenv('DB_NAME') ?: "Mysql";
+$dbusername = getenv('DB_USER') ?: "root";
+$dbpassword = getenv('DB_PASS') ?: "";
+$dbport = getenv('DB_PORT') ?: "3306";
 
 //error reporting level.  Set to 0 for production servers.
 error_reporting(E_ALL & ~E_NOTICE);
@@ -87,7 +78,7 @@ $CFG['GEN']['newpasswords'] = 'only';
 //no need to change anything from here on
   /* Connecting, selecting database */
 	try {
-	 $DBH = new PDO("mysql:host=$dbserver;dbname=$dbname", $dbusername, $dbpassword);
+	 $DBH = new PDO("mysql:host=$dbserver;port=$dbport;dbname=$dbname", $dbusername, $dbpassword);
 	 $DBH->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 	 $GLOBALS["DBH"] = $DBH;
 	} catch(PDOException $e) {
@@ -98,5 +89,6 @@ $CFG['GEN']['newpasswords'] = 'only';
 	  unset($dbserver);
 	  unset($dbusername);
 	  unset($dbpassword);
+	  unset($dbport);
 
 ?>
