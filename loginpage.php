@@ -27,12 +27,15 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 ?>
 	
 
+<!-- Main login wrapper -->
 <div class="login-content-div" >
     <div id="loginbox">
+        <!-- Login hero text -->
         <div class="login-header">
             <h1 class="login-title">Welcome Back</h1>
             <p class="login-subtitle">Sign in to your account to continue</p>
         </div>
+    <!-- Primary login form -->
     <form method="post" action="<?php echo $loginFormAction;?>">
     <?php
         if ($haslogin) {
@@ -50,8 +53,10 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         }
     ?>
 
+    <!-- Warn users if JavaScript is disabled -->
     <div><noscript>JavaScript is not enabled.  JavaScript is required for <?php echo $installname; ?>.  Please enable JavaScript and reload this page</noscript></div>
 
+    <!-- Username/password fields -->
     <div class="login-input-box">
         <div class="input-wrapper">
             <label for="username" class="input-label"><?php echo $loginprompt; ?></label>
@@ -66,14 +71,17 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         <input class="login-submit-btn" type="submit" value="Sign In"/>
     </div>
 
+    <!-- Student self-registration -->
     <div class="student-sign-up-button">
         <a href="<?php echo $imasroot; ?>/forms.php?action=newuser">Register as a new student</a>
     </div>
+    <!-- Account recovery links -->
     <div class="reset-link">
         <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" >Forgot Password</a>
         <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
     </div>
     
+    <!-- Hidden instructor request modal -->
     <div id="instructorAuthPopup" class="popup-container" style="display:none;">
         <div class="popup-content">
             <h4>Instructor Account Access</h4>
@@ -89,6 +97,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         </div>
     </div>
     
+    <!-- Instructor request modal JS -->
     <script>
         // Define fixed authentication code - must match the one in newinstructor.php
         var fixedAuthCode = '<?php 
@@ -148,6 +157,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         }
         
     </script>
+    <!-- About/marketing popups -->
     <div class="aboutLinks">
 <!--    <div>-->
 <!--        <a href="#" onclick="openHelpYourMathPopup(event); return false;">About HelpYourMath</a>-->
@@ -164,6 +174,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
             </div>
     </div>
 
+        <!-- HelpYourMath modal behavior -->
         <script>
             function openHelpYourMathPopup(event) {
                 event.preventDefault();
@@ -191,6 +202,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
             </div>
         </div>
 
+        <!-- IMathAS modal behavior -->
         <script>
             function openIMathASPopup(event) {
                 event.preventDefault();
@@ -204,6 +216,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         </script>
     </div>
 
+    <!-- Hidden fields for timezone + challenge -->
     <input type="hidden" id="tzoffset" name="tzoffset" value="">
     <input type="hidden" id="tzname" name="tzname" value="">
     <input type="hidden" id="challenge" name="challenge" value="<?php echo $challenge; ?>" />
@@ -221,6 +234,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     </form>
     </div>
 </div>
+<!-- Footer attribution + instructor link -->
 <div class="login-copyright">
     <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2025 HelpYourMath Team | <a href="#" class="instructor-request-link" onclick="openInstructorAuthPopup(event); return false;">Request instructor Account</a></p>
 
@@ -228,6 +242,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 
     <p>The Homework Platform is powered by <a href="#" onclick="openIMathASPopup(event); return false;">IMathAS</a> © 2006-2025 David Lippman</p>
 </div>
+<!-- Inline styles for the footer CTA -->
 <style>
 .instructor-request-link {
     display: inline-block;
