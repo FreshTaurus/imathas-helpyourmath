@@ -81,82 +81,6 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
     </div>
     
-    <!-- Hidden instructor request modal -->
-    <div id="instructorAuthPopup" class="popup-container" style="display:none;">
-        <div class="popup-content">
-            <h4>Instructor Account Access</h4>
-            <p>Please enter the invitation code to continue:</p>
-            <div style="margin: 20px 0;">
-                <input type="text" id="instructorAuthCode" placeholder="Enter invitation code" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;" />
-                <div id="authCodeError" style="color: red; margin-top: 10px; display: none;">Invalid invitation code. Please try again.</div>
-            </div>
-            <div style="text-align: end;">
-                <button onclick="closeInstructorAuthPopup(event);" style="margin-right: 10px; padding: 8px 16px; background: #ccc; border: none; border-radius: 4px; cursor: pointer;">Cancel</button>
-                <button onclick="verifyInstructorAuthCode(event);" style="padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Verify</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Instructor request modal JS -->
-    <script>
-        // Define fixed authentication code - must match the one in newinstructor.php
-        var fixedAuthCode = '<?php 
-            $authCode = 'NEW1N5TRUCT0R2025';
-            if (isset($CFG) && isset($CFG['GEN']['instructorAuthCode'])) {
-                $authCode = $CFG['GEN']['instructorAuthCode'];
-            }
-            echo addslashes($authCode);
-        ?>';
-        
-        function openInstructorAuthPopup(event) {
-            event.preventDefault();
-            var popup = document.getElementById('instructorAuthPopup');
-            var input = document.getElementById('instructorAuthCode');
-            popup.style.display = 'flex';
-            input.focus();
-            document.getElementById('authCodeError').style.display = 'none';
-            input.value = '';
-            
-            // Setup Enter key handler
-            input.onkeypress = function(e) {
-                if (e.key === 'Enter') {
-                    verifyInstructorAuthCode(e);
-                }
-            };
-        }
-        
-        function closeInstructorAuthPopup(event) {
-            event.preventDefault();
-            document.getElementById('instructorAuthPopup').style.display = 'none';
-            document.getElementById('authCodeError').style.display = 'none';
-        }
-        
-        function verifyInstructorAuthCode(event) {
-            event.preventDefault();
-            var enteredCode = document.getElementById('instructorAuthCode').value.trim();
-            var errorDiv = document.getElementById('authCodeError');
-            
-            if (enteredCode === fixedAuthCode) {
-                // Code is correct - redirect to newinstructor.php with verified code in session
-                // We'll use a form submission to set session variable
-                var form = document.createElement('form');
-                form.method = 'POST';
-                form.action = '<?php echo $imasroot; ?>/newinstructor.php';
-                var input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = 'authcode_verified';
-                input.value = '1';
-                form.appendChild(input);
-                document.body.appendChild(form);
-                form.submit();
-            } else {
-                errorDiv.style.display = 'block';
-                document.getElementById('instructorAuthCode').value = '';
-                document.getElementById('instructorAuthCode').focus();
-            }
-        }
-        
-    </script>
     <!-- About/marketing popups -->
     <div class="aboutLinks">
 <!--    <div>-->
@@ -236,7 +160,7 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
 </div>
 <!-- Footer attribution + instructor link -->
 <div class="login-copyright">
-    <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2025 HelpYourMath Team | <a href="#" class="instructor-request-link" onclick="openInstructorAuthPopup(event); return false;">Request instructor Account</a></p>
+    <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2025 HelpYourMath Team | <a href="<?php echo $imasroot; ?>/newinstructor.php" class="instructor-request-link">Request instructor Account</a></p>
 
 
 
