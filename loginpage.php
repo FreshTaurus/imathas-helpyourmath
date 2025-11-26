@@ -73,9 +73,6 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
         <a href="<?php echo $imasroot; ?>/forms.php?action=resetpw" >Forgot Password</a>
         <a href="<?php echo $imasroot; ?>/forms.php?action=lookupusername">Forgot Username</a>
     </div>
-    <div  class ="instructor-acc-link" >
-        <a href="#" onclick="openInstructorAuthPopup(event); return false;">Request instructor Account</a>
-    </div>
     
     <div id="instructorAuthPopup" class="popup-container" style="display:none;">
         <div class="popup-content">
@@ -225,12 +222,31 @@ if (!isset($imasroot)) { //don't allow direct access to loginpage.php
     </div>
 </div>
 <div class="login-copyright">
-    <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2025 HelpYourMath Team</p>
+    <p>The OER Platform is powered by <a href="#" onclick="openHelpYourMathPopup(event); return false;">HelpYourMath</a> © 2017-2025 HelpYourMath Team | <a href="#" class="instructor-request-link" onclick="openInstructorAuthPopup(event); return false;">Request instructor Account</a></p>
 
 
 
     <p>The Homework Platform is powered by <a href="#" onclick="openIMathASPopup(event); return false;">IMathAS</a> © 2006-2025 David Lippman</p>
 </div>
+<style>
+.instructor-request-link {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+}
+.instructor-request-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
 <?php 
 	require("footer.php");
 ?>
